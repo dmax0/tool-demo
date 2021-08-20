@@ -1,0 +1,11 @@
+{
+  "name": "JavaScriptCalculator",
+  "version": "1.0.0",
+  "description": "A simple calculator by JavaScript",
+  "main": "index.js",
+  "author": "KslgrmDry",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^2.2.7"
+  }
+}

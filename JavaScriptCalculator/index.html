@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <div class="flex justify-center min-h-screen items-center">
+  
+        <div id="calculator" class="bg-blue-50 bg-opacity-60 opacity-80 grid-cols-6 grid-rows-4 shadow-lg rounded-2xl ring-blue-300 ring-2 ring-opacity-20">
+          <div id="logo" class="text-blue-300 text-right font-mono mr-5 mt-5 ">
+            Calculator
+          </div>
+          <div class="col-span-4 line">
+            <input id="result" autocomplete="off" value="0" readonly />
+          </div>
+          <div class="line">
+            <button data-action="clear">AC</button>
+            <button data-action="backspace">←</button>
+            <button data-action="mod">%</button>
+            <button data-action="divide">÷</button>
+          </div>
+          <div class="line">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button data-action="multiply">×</button>
+          </div>
+          <div class="line">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button data-action="subtract">-</button>
+          </div>
+          <div class="line">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button data-action="add">+</button>
+          </div>
+          <div class="line">
+            <button class="btn-w41">0</button>
+            <button data-action="dot">.</button>
+            <button data-action="calculate">=</button>
+          </div>
+        </div>
+      </div>
+      <script src="src/index.js"></script>
+</body>
+</html>

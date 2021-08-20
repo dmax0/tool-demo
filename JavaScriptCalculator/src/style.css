@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+.line {
+  @apply col-span-4 m-5;
+}
+.line button {
+
+  @apply font-bold py-2  rounded-full text-xl  shadow-md  w-20 font-thin;
+}
+
+.btn-w41 {
+  @apply font-bold py-2  rounded-full  text-xl   w-41 font-thin !important;
+}
+
+.line button:active {
+border-radius: 48px;
+background: #eff6ff;
+box-shadow: inset -12px 12px 10px #e3eaf2,
+            inset 12px -12px 10px #fbffff;
+  @apply font-bold py-2 rounded-full bg-blue-50 text-xl 
+   w-20 font-thin;
+}
+.line input {
+  @apply border  text-blue-300 text-right text-2xl outline-none w-full rounded;
+}
+.line input:focus {
+  @apply border-blue-400  text-blue-300 text-right text-2xl outline-none w-full rounded;
+}
+@tailwind utilities;
