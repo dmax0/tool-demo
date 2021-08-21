@@ -1,110 +1,42 @@
 
-/** --- 答案显示部分 ---**/
+const display = document.querySelector("#display"),
+    numberKeys = document.querySelectorAll("button[data-action='number']"),
+    operatorKeys = document.querySelectorAll("button[data-action='operator']"),
+    dotKey = document.querySelector("button[data-action='dot']"),
+    clearKey = document.querySelector("button[data-action='clear']"),
+    equalKey = document.querySelector("button[data-action='equal']"),
+    switchKey = document.querySelector("button[data-action='switch']"),
+    tips = document.querySelector('#tips'),
+    powerState = document.querySelector('#powerState');
 
-const result = document.querySelector("#result");
+    const calculator = new Calculator();
 
-const btns = document.querySelectorAll("button");
-
-/**
- * 点击按钮事件函数
- */
-
-const operator = ['add', 'subtract', 'multiply', 'divide', 'dot', 'mod'],
-    key = ['+', '-', '×', '÷', '%'],
-    otherKey = ['clear', 'backspace', 'calculate'];
-let isAddDot = true,
-    isNewLine = true;
-function Calculaor() {
-
-    const action = this.dataset.action;
-
-    if (otherKey.indexOf(action) > -1) {
-
-        if (action === 'calculate' && isLegal(result.value)) {
-
-            const resultExp =
-                result
-                    .value.replace(new RegExp('×', 'g'), '*')
-                    .replace(new RegExp('÷', 'g'), '/');
-
-            result.value =
-                parseFloat(eval(resultExp).toFixed(12))
-                    .toString();
-            isNewLine = true;
-            console.log(result.value.indexOf('.'))
-            isAddDot = result.value.indexOf('.') > -1 ?
-                false : true;
-        }
-        else if (action === 'clear') {
-            result.value = '0';
-            isAddDot = true,
-                isNewLine = true;
-        }
-        else if (action === 'backspace') {
-            if (result.value.length === 1) {
-                result.value = '0';
-                
-                isNewLine = true;
-            }
-            if(result.value.length > 1){
-                result.value = 
-                result.value.slice(0, -1);
-            }
-            if (!result.value.includes('.')) isAddDot = true;
-            else {
-                const idx = result.value.indexOf('.');
-                for (let i = idx; i < result.value.split('').length; i++) {
-                    if (result.value.split('')[i] === '.')
-                        isAddDot = false;
-                    if (key.indexOf(result.value.split('')[i]) > -1) {
-                        isAddDot = true;
-                    }
-                }
-                
-            }
-        }
+    for (const numberKey of numberKeys) {
+        numberKey.addEventListener('click',function() {   
+            calculator.currentState.pressNumberKey(this.textContent);
+        })
     }
-    else if (operator.indexOf(action) > -1) {
 
-
-        if (action === 'dot' && isLegal(result.value)) {
-            if (isAddDot) {
-                result.value += '.';
-                isAddDot = false;
-                isNewLine = false;
-            }
-        }
-        else {
-            if (isLegal(result.value)) {
-                result.value += this.textContent;
-                isAddDot = true;
-                isNewLine = false;
-            }
-
-        }
-
-    } else if (!action) {
-
-        if (result.value === '0' || isNewLine === true) {
-            result.value = this.textContent;
-            isNewLine = false;
-            if (!result.value.includes('.')) isAddDot = true;
-
-        } else {
-            result.value += this.textContent;
-            isNewLine = false;
-        }
-
-
+    for (const operatorKey of operatorKeys) {
+        operatorKey.addEventListener('click',function() {
+            calculator.currentState.pressOperatorKey(this.textContent);
+        })
     }
-}
 
-function isLegal(str) {
-    return !key.includes(str.substr(-1, 1));
-}
+    dotKey.addEventListener('click',function(){
+        calculator.currentState.pressDotKey(this.textContent);
+    })
 
+    
 
-for (const btn of btns) {
-    btn.addEventListener('click', () => Calculaor.call(btn));
+    equalKey.addEventListener('click',function(){
+        calculator.currentState.pressEqualsKey();
+    })
 
-}
+    clearKey.addEventListener('click',function(){
+        calculator.currentState.pressClearKey();
+    })
+    switchKey.addEventListener('click',function(){
+        
+        calculator.currentState.pressSwitchKey();
+    })

@@ -4,20 +4,23 @@
   @apply col-span-4 m-5;
 }
 .line button {
-
-  @apply font-bold py-2  rounded-full text-xl  shadow-md  w-20 font-thin;
+  border-radius: 64px;
+  background: linear-gradient(315deg, #d4dbe6, #fbffff);
+  box-shadow: -2px -2px 0px #d4dbe6,
+              2px 2px 0px #ffffff;
+  @apply  py-2  rounded-full text-xl   w-20 font-thin;
 }
 
 .btn-w41 {
-  @apply font-bold py-2  rounded-full  text-xl   w-41 font-thin !important;
+  @apply  py-2  rounded-full  text-xl   w-41 font-thin !important;
 }
 
 .line button:active {
-border-radius: 48px;
-background: #eff6ff;
-box-shadow: inset -12px 12px 10px #e3eaf2,
-            inset 12px -12px 10px #fbffff;
-  @apply font-bold py-2 rounded-full bg-blue-50 text-xl 
+  border-radius: 64px;
+  background: #ebf3ff;
+  box-shadow: inset -2px -2px 0px #ffffff,
+              inset 1px 0px 0px #d4dbe6;
+  @apply  py-2 rounded-full  text-xl 
    w-20 font-thin;
 }
 .line input {

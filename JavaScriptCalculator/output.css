@@ -628,10 +628,10 @@ video {
 }
 
 .line button {
-  /* border-radius: 57px;
-background: linear-gradient(45deg, #d7dde6, #ffffff);
-box-shadow:  10px -10px 8px #e1e7f0,
-             -10px 10px 8px #fdffff; */
+  border-radius: 64px;
+  background: linear-gradient(315deg, #d4dbe6, #fbffff);
+  box-shadow: -2px -2px 0px #d4dbe6,
+              2px 2px 0px #ffffff;
   width: 5rem;
   border-radius: 9999px;
   padding-top: 0.5rem;
@@ -639,9 +639,6 @@ box-shadow:  10px -10px 8px #e1e7f0,
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 100;
-  font-weight: 700;
-  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .btn-w41 {
@@ -652,24 +649,20 @@ box-shadow:  10px -10px 8px #e1e7f0,
   font-size: 1.25rem !important;
   line-height: 1.75rem !important;
   font-weight: 100 !important;
-  font-weight: 700 !important;
 }
 
 .line button:active {
-  border-radius: 48px;
-  background: #eff6ff;
-  box-shadow: inset -12px 12px 10px #e3eaf2,
-            inset 12px -12px 10px #fbffff;
+  border-radius: 64px;
+  background: #ebf3ff;
+  box-shadow: inset -2px -2px 0px #ffffff,
+              inset 1px 0px 0px #d4dbe6;
   width: 5rem;
   border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgba(239, 246, 255, var(--tw-bg-opacity));
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 100;
-  font-weight: 700;
 }
 
 .line input {
