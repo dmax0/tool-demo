@@ -27,12 +27,9 @@ dotKey.addEventListener('click', function () {
     calculator.currentState.pressDotKey(this.textContent);
 })
 
-
-
 equalKey.addEventListener('click', function () {
     calculator.currentState.pressEqualsKey();
 })
-
 clearKey.addEventListener('click', function () {
     calculator.currentState.pressClearKey();
 })

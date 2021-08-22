@@ -8,15 +8,4 @@
 
 https://tool.dmax.wang/JavaScriptCalculator
 
-使用前需要使用npm或yarn安装依赖：
-
-```sh
-npm install
-```
-
-或者：
-
-```
-yarn install
-```
 
