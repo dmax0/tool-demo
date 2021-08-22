@@ -6,7 +6,7 @@
 
 预览地址：
 
-[]:https://tool.dmax.wang/JavaScriptCalculator
+https://tool.dmax.wang/JavaScriptCalculator
 
 使用前需要使用npm或yarn安装依赖：
 
