@@ -9,34 +9,34 @@ const display = document.querySelector("#display"),
     tips = document.querySelector('#tips'),
     powerState = document.querySelector('#powerState');
 
-    const calculator = new Calculator();
+const calculator = new Calculator();
 
-    for (const numberKey of numberKeys) {
-        numberKey.addEventListener('click',function() {   
-            calculator.currentState.pressNumberKey(this.textContent);
-        })
-    }
-
-    for (const operatorKey of operatorKeys) {
-        operatorKey.addEventListener('click',function() {
-            calculator.currentState.pressOperatorKey(this.textContent);
-        })
-    }
-
-    dotKey.addEventListener('click',function(){
-        calculator.currentState.pressDotKey(this.textContent);
+for (const numberKey of numberKeys) {
+    numberKey.addEventListener('click', function () {
+        calculator.currentState.pressNumberKey(this.textContent);
     })
+}
 
-    
+for (const operatorKey of operatorKeys) {
+    operatorKey.addEventListener('click', function () {
+        calculator.currentState.pressOperatorKey(this.textContent);
+    })
+}
 
-    equalKey.addEventListener('click',function(){
-        calculator.currentState.pressEqualsKey();
-    })
+dotKey.addEventListener('click', function () {
+    calculator.currentState.pressDotKey(this.textContent);
+})
 
-    clearKey.addEventListener('click',function(){
-        calculator.currentState.pressClearKey();
-    })
-    switchKey.addEventListener('click',function(){
-        
-        calculator.currentState.pressSwitchKey();
-    })
+
+
+equalKey.addEventListener('click', function () {
+    calculator.currentState.pressEqualsKey();
+})
+
+clearKey.addEventListener('click', function () {
+    calculator.currentState.pressClearKey();
+})
+switchKey.addEventListener('click', function () {
+
+    calculator.currentState.pressSwitchKey();
+})
