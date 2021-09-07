@@ -37,3 +37,5 @@ switchKey.addEventListener('click', function () {
 
     calculator.currentState.pressSwitchKey();
 })
+
+

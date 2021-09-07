@@ -135,7 +135,7 @@ class Calculator {
                             .replace(new RegExp('÷', 'g'), '/')
                             .replace(new RegExp('×', 'g'), '*');
 
-        this.display.value = parseFloat(eval(expression).toFixed(12)).toString();
+        this.display.value = parseFloat(eval(expression).toFixed(15)).toString();
     }
     errorMsg(errorMsg, inputToRed = true) {
         if (inputToRed) {
