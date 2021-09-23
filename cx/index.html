@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q绑定查询</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container items-center px-5 py-12 lg:px-20 " id="warning" style="display: none;">
+        <div class="w-full text-red-600 border rounded-lg shadow-xl ">
+            <div class="flex items-center justify-between px-6 py-4 mx-auto ">
+                <div class="flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-4 icon icon-tabler icon-tabler-alert-triangle"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        <polyline points="11 12 12 12 12 16 13 16"></polyline>
+                    </svg>
+                    <p class="text-sm font-semibold tracking-wide uppercase " id="text">
+
+                    </p>
+                </div>
+                <button
+                    class="p-1 transition-colors duration-200 transform rounded-md hover:bg-opacity-25 hover:bg-blueGray-600 focus:outline-none"
+                    type="button" aria-label="Close" aria-hidden="true">
+                    <svg id='close' xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle-x"
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M10 10l4 4m0 -4l-4 4"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="text-blueGray-700 ">
+        <div class="container items-center px-5 py-12 lg:px-20">
+            <div
+                class="flex flex-col w-full p-10 mx-auto my-6 transition duration-500 ease-in-out transform bg-white border rounded-lg lg:w-2/6 md:w-1/2 md:mt-0">
+                <div class="relative mt-4">
+                    <input type="text" id="qq" name="qq"
+                        class="w-full px-4 py-2 mt-2 text-base text-black transition duration-500 ease-in-out transform border-transparent rounded-lg bg-blueGray-100 focus:border-blueGray-500 focus:bg-white focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2  border-2 border-blue-300">
+                </div>
+                <br />
+                <button id="btn"
+                    class="w-full px-16 py-2 my-2 mr-2 text-base text-white transition duration-500 ease-in-out transform bg-blue-600 border-blue-600 rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:bg-blue-800 ">
+                    
+                      查询 
+                </button>
+                <p class="mx-auto mt-3 text-xs text-blueGray-500">输入QQ号查询</p>
+                <div id="result" style="display: none;">
+                    <ul class="divide-y-2 divide-gray-100">
+                        <li class="p-3" id="phone"></li>
+                        <li class="p-3" id="phonediqu"></li>
+                        <li class="p-3" id="lol"></li>
+                        <li class="p-3" id="wb"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <div class="container items-center ">
+        <footer class="text-blueGray-700 transition duration-500 ease-in-out transform bg-white border rounded-lg ">
+            <div class="flex flex-col flex-wrap justify-center p-5 md:flex-row">
+                <nav class="flex flex-wrap items-center justify-center w-full mx-auto mb-6 text-base nprd">
+                    <a href="https://www.dmax.wang"
+                        class="px-4 py-1 mr-1 text-base text-blueGray-500 transition duration-500 ease-in-out transform rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black ">KslgmrDry</a>
+                    <a href="https://blog.dmax.wang"
+                        class="px-4 py-1 mr-1 text-base text-blueGray-500 transition duration-500 ease-in-out transform rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black ">博客</a>
+                    <a href="https://blog.csdn.net/KslgmrDry"
+                        class="px-4 py-1 mr-1 text-base text-blueGray-500 transition duration-500 ease-in-out transform rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black ">csdn</a>
+                </nav>
+            </div>
+            <div class="w-full px-8 mt-2 rounded-b-lg bg-blueGray-50">
+                <div class="container inline-flex flex-col flex-wrap items-center px-5 py-6 mx-auto sm:flex-row">
+                    <p class="mx-auto text-sm text-center text-black sm:text-left "> © 2021 </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+<script>
+    document.querySelector('#close').addEventListener('click', () => {
+        document.querySelector('#warning').style.display = 'none';
+    })
+    document.querySelector('#btn').addEventListener('click', () => {
+        const qq = document.querySelector('#qq').value;
+        const warning = document.querySelector('#warning'),
+            text = document.querySelector('#text'),
+            result = document.querySelector('#result'),
+            phone = document.querySelector('#phone'),
+            phonediqu = document.querySelector('#phonediqu'),
+            lol = document.querySelector('#lol'),
+            wb = document.querySelector('#wb');
+
+        axios.interceptors.request.use((config) => {
+            console.log(0);
+            return config;
+        }, (error) => {
+
+            return Promise.reject(error);
+        });
+
+        axios.interceptors.response.use(function (response) {
+            // Do something with response data
+            console.log('Done with Ajax call');
+
+            return response;
+        }, function (error) {
+            // Do something with response error
+            console.log('Error fetching the data');
+            return Promise.reject(error);
+        });
+
+        axios.get('https://cxx.yun7.me/qqcx', {
+            params: {
+                qq: qq
+            }
+        })
+            .then(function (response) {
+                console.log(response);
+                if (response.data.status === 500) {
+                    warning.style.display = 'none';
+                    text.innerHTML = response.data.message;
+                    warning.style.display = 'block';
+                }
+                else if (response.data.status === 200) {
+                    result.style.display = 'none';
+                    phone.innerHTML = `密保手机号码：${response.data.phone}`;
+                    phonediqu.innerHTML = `号码归属地：${response.data.phonediqu}`;
+                    lol.innerHTML = `LOL信息：${response.data.lol}`;
+                    wb.innerHTML = `微博UID：${response.data.wb}`;
+                    result.style.display = 'block';
+                }
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    })
+</script>
+
+</html>
