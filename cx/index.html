@@ -110,24 +110,8 @@
             lol = document.querySelector('#lol'),
             wb = document.querySelector('#wb');
 
-        axios.interceptors.request.use((config) => {
-            console.log(0);
-            return config;
-        }, (error) => {
+        
 
-            return Promise.reject(error);
-        });
-
-        axios.interceptors.response.use(function (response) {
-            // Do something with response data
-            console.log('Done with Ajax call');
-
-            return response;
-        }, function (error) {
-            // Do something with response error
-            console.log('Error fetching the data');
-            return Promise.reject(error);
-        });
 
         axios.get('https://cxx.yun7.me/qqcx', {
             params: {
