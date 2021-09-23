@@ -119,7 +119,7 @@
             }
         })
             .then(function (response) {
-                console.log(response);
+                
                 if (response.data.status === 500) {
                     warning.style.display = 'none';
                     text.innerHTML = response.data.message;
