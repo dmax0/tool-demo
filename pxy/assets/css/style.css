@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0  ;
+}
+
+body{
+
+    background: #d6ceda;
+}
+
+.left{
+
+    position: fixed;
+
+    left: 10px;
+
+    background: #fff;
+
+    width: 200px;
+    border-radius: 20px;
+    height: 98%;
+    top: 1%;
+}
+.logo{
+
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+.msg{
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 50px auto 0;
+}
+
+.msg img{
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.msgR {
+
+    float: left;
+
+    margin: 8px;
+}
+.msgR h2{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 19px;
+}
+.msgR p{
+
+    color: #666;
+}
+.nav{
+
+    width: 78%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.navlist button{
+    height: 40px;
+    line-height: 40px;
+}
+
+.navlist i {
+    margin-right: 10px;
+}
+.sub{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.sub a{
+    display: block;
+    height: 33px;
+    font-size: 14px;
+    color: #666;
+}
+.sub a i{
+
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.logout{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+}
+
+.logout :hover{
+    color: #ff0000;
+}
+
+.right{
+
+    position: fixed;
+
+    right: 10px;
+
+    top: 10px;
+
+    height: 98%;
+
+    text-align: center;
+}
+.shandian{
+
+    font-size: 26px;
+
+    padding-bottom: 15px;
+}
+.rightnav{
+    text-align: center;
+    margin-left: 5px;
+    margin-top: 12px;
+}
+.rightnav button{
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: block;
+}
+.rightnav button span{
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    display: inline-block;
+    border-radius: 9px;
+    margin-bottom: 5px;
+    line-height: 40px;
+    font-size: 16px;
+}
+
+.ren{
+
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+}
+.ren button{
+    width: 40px;
+    height: 40px;
+    display: block;
+    text-align: right;
+    line-height: 60px;
+    font-size: 42px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.m{
+    display: none;
+    width:70%;
+    margin-top: 4%;
+    position: absolute;
+    left: 22%;
+    min-height: 650px;
+    border-radius: 2%;
+    background: #fff;
+}
+
+.m iframe {
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 90%;
+    height: max-content;
+    min-height: 630px;
+    margin-bottom: 1%;
+}
+.m-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    position: absolute;
+    left: 22%;
+    min-height: 50px;
+    text-align: center;
+}
+
+.m-title p{
+    font-size: 30px;
+    font-family: "PT Mono";
+    font-weight: bold;
+    margin-top: 15px;
+}
+.m-title button{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 20px;
+}

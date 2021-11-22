@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程表</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body class="flex">
+    <!-- 今日课程 -->
+    <div class="w-1/3 min-h-screen  flex justify-start items-start p-4">
+        <div class="w-full  rounded-lg shadow-sm p-8">
+            <div class="flex justify-between items-center">
+                <h1 class="font-extrabold tracking-wider">今日课程</h1>
+            </div>
+            <div class="flex flex-col mt-5 gap-2 text-sm">
+                <div class="bg-yellow-50 flex justify-between items-center p-3 rounded-sm shadow-sm">
+                    <div class="flex justify-start items-center gap-2">
+                        <div>
+                            <p class="text-gray-700 font-bold tracking-wider">算法分析与设计</p>
+                            <p class="text-gray-400 text-xs">上午1-2节</p>
+                        </div>
+                    </div><span class="font-bold text-yellow-500">LA3-327</span>
+                </div>
+                <div class="bg-green-50 flex justify-between items-center p-3 rounded-sm shadow-sm">
+                    <div class="flex justify-start items-center gap-2">
+                        <div>
+                            <p class="text-gray-700 font-bold tracking-wider">软件工程经济学</p>
+                            <p class="text-gray-400 text-xs">上午3-4节</p>
+                        </div>
+                    </div><span class="font-bold text-green-500">LA3-503</span>
+                </div>
+                <div class="bg-pink-50 flex justify-between items-center p-3 rounded-sm shadow-sm">
+                    <div class="flex justify-start items-center gap-2">
+                        <div>
+                            <p class="text-gray-700 font-bold tracking-wider">C程序设计(重修)</p>
+                            <p class="text-gray-400 text-xs">下午1-2节</p>
+                        </div>
+                    </div><span class="font-bold text-pink-500">LA5-207</span>
+                </div>
+                <div class="bg-indigo-50 flex justify-between items-center p-3 rounded-sm shadow-sm">
+                    <div class="flex justify-start items-center gap-2">
+                        <div>
+                            <p class="text-gray-700 font-bold tracking-wider">软件设计与体系结构</p>
+                            <p class="text-gray-400 text-xs">下午3-4节</p>
+                        </div>
+                    </div><span class="font-bold text-indigo-500">LA6-455</span>
+                </div>
+                <div class="bg-blue-50 flex justify-between items-center p-3 rounded-sm shadow-sm">
+                    <div class="flex justify-start items-center gap-2">
+                        <div>
+                            <p class="text-gray-700 font-bold tracking-wider">离散数学(重修)</p>
+                            <p class="text-gray-400 text-xs">晚上1-4节</p>
+                        </div>
+                    </div><span class="font-bold text-blue-500">LA3-325</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 本周课程表 -->
+    <div class="w-2/3 ">
+        <div class='w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto'>
+            <div class='px-2 py-3'>
+                <div class='w-full flex border-t mb-1 justify-between'>
+                    <h1 class="mt-2 text-xl font-bold">本周课表</h1>
+                    <button class="p-2 pl-2 pr-2 bg-transparent border-2 border-gray-500 text-black rounded-lg">添加课程</button>
+                </div>
+                <table class="w-full border">
+                    <thead>
+                        <tr class="border-t font-mono">
+                            <td class="p-2 border-r w-1/8"></td>
+                            <td class="p-2 border-r w-1/8">星期一</td>
+                            <td class="p-2 border-r w-1/8">星期二</td>
+                            <td class="p-2 border-r w-1/8">星期三</td>
+                            <td class="p-2 border-r w-1/8">星期四</td>
+                            <td class="p-2 border-r w-1/8">星期五</td>
+                            <td class="p-2 border-r w-1/8">星期六</td>
+                            <td class="p-2 border-r w-1/8">星期天</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">1</td>
+                            <td class="p-1 pl-2 border-r bg-pink-100 text-pink-500 w-20" rowspan="2">Web前端开发LA6-324</td>
+                            <td class="p-1 pl-2 border-r bg-green-100 text-green-500 w-20" rowspan="2">计算机组成原理LA3-315</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r bg-yellow-50 text-yellow-500 w-20" rowspan="2">算法分析与设计LA3-327</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r bg-indigo-100 text-indigo-500 w-20" rowspan="4">C程序设计(重修)LA5-207</td>
+                            
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">2</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            
+                            <td class="p-1 pl-2 border-r"></td>
+                            
+  
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">3</td>
+                            <td class="p-1 pl-2 border-r bg-indigo-100 text-indigo-500 w-20" rowspan="2">操作系统LA6-327</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            
+                            <td class="p-1 pl-2 border-r bg-gray-100 text-gray-500 w-20" rowspan="2">软件设计与体系结构LA3-502</td>
+                            <td class="p-1 pl-2 border-r bg-yellow-50 text-yellow-500 w-20" rowspan="2">算法分析与设计LA3-327</td>
+                            <td class="p-1 pl-2 border-r bg-green-50 text-green-500 w-20" rowspan="2">软件工程经济学LA3-503</td>
+
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">4</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r">5</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">6</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">7</td>
+                            <td class="p-1 pl-2 border-r bg-yellow-100 text-yellow-500 w-20" rowspan="2">形势政策LA5-228</td>
+                            <td class="p-1 pl-2 border-r bg-indigo-100 text-indigo-500 w-20" rowspan="2">操作系统LA6-327</td>
+                            <td class="p-1 pl-2 border-r bg-green-100 text-green-500 w-20" rowspan="2">计算机组成原理LA3-315</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r bg-indigo-100 text-indigo-500 w-20" rowspan="2">C程序设计(重修)LA5-207</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">8</td>
+
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">9</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r bg-red-100 text-red-500 w-20" rowspan="2">大学英语LA5-232</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r bg-green-50 text-green-500 w-20" rowspan="2">软件工程经济学LA3-503</td>
+                            <td class="p-1 pl-2 border-r bg-gray-100 text-gray-500 w-20" rowspan="2">软件设计与体系结构LA3-502</td>
+                            
+                            <td class="p-1 pl-2 border-r"></td>
+
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">10</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">11</td>
+                            <td class="p-1 pl-2 border-r bg-purple-100 text-purple-500 w-20" rowspan="4">Python程序设计LA5-223</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r bg-gray-50 text-gray-500 w-20" rowspan="4">离散数学(重修)LA3-325</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">12</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">13</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                        </tr>
+                        <tr class="border-t text-sm">
+                            <td class="p-1 pl-2 border-r ">14</td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                            <td class="p-1 pl-2 border-r"></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+        </div>
+
+       
+    </div>
+</body>
+<script>
+    const title = window.parent.document.querySelector('.m-title>p');
+    if(title){
+        title.innerHTML = `裴先易的课程表`;
+        title.classList.add('animate__animated', 'animate__jackInTheBox');
+    }
+</script>
+</html>

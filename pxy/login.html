@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body>
+    <div class="min-h-screen bg-no-repeat bg-cover bg-center"
+        style="background-image: url('images/tx.png')">
+        <div class="flex justify-end">
+            <div class="bg-white min-h-screen w-1/2 flex justify-center items-center">
+                <div>
+
+                    <form>
+                        <div>
+                            <span class="text-sm text-gray-900">欢迎</span>
+                            <h1 class="text-2xl font-bold">登录</h1>
+                        </div>
+                        <div class="my-3">
+                            <label class="block text-md mb-2" for="email">账号</label>
+                            <input class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="text"
+                                name="username" value="12345">
+                        </div>
+                        <div class="mt-5">
+                            <label class="block text-md mb-2" for="password">密码</label>
+                            <input class="px-4 w-full border-2 py-2 rounded-md text-sm outline-none" type="password"
+                                name="password" value="12345">
+                        </div>
+                        <div class="">
+                            <button
+                                class="mt-4 mb-3 w-full bg-green-500 hover:bg-green-400 text-white py-2 rounded-md transition duration-100">登录</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+
+    const form = document.querySelector('form');
+    const btn = document.querySelector('button');
+    form.onsubmit = function () {
+
+        const username = document.querySelector('input[name=username]').value;
+
+        const password = document.querySelector('input[name=password]').value;
+        if (username == '' || password == '') {
+            alert('账号或密码不能为空');
+            return false;
+        }
+        if (username == '12345' && password == '12345') {
+            alert('登录成功');
+            location.href = 'index.html';
+            return false;
+
+        } else {
+            alert('账号或密码错误');
+            return false;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计划</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body>
+
+
+
+    <body class="grid grid-cols-5 gap-1">
+        <div class="sm:col-start-2 sm:col-span-3 col-start-1 col-span-5">
+            <div>
+                <input id="input" class="mt-3  focus:outline-none border-b-2  rounded font-thin h-6 w-full " placeholder="输入..." />
+                <button id="add"
+                    class="mt-3 bg-transparent  hover:text-white hover:bg-black py-2 px-4 border border-black hover:border-transparent rounded">
+                    添加
+                </button>
+            </div>
+
+            
+            <div class="w-full  rounded-lg shadow-lg ">
+                <ul id="list">
+                    <li class="flex items-center justify-between p-3 mt-2 bg-white" id="0">
+                        <input type="checkbox" onclick="itemIsDone(0)" id="input0">
+                        <label for="input0">
+                            <p id="p0">吃饭</p>
+                        </label>
+                        <button
+                            class="bg-transparent hover:bg-red-300 text-red-700 hover:text-white py-2 px-4 border border-red-300 hover:border-transparent rounded"
+                            onclick="deleteItem(0)">
+                            delete
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <script src="assets/js/todolist.js"></script>
+
+    </body>
+
+</html>

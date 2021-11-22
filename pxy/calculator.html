@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <style>
+    button {
+      border-radius: 64px;
+      background: linear-gradient(315deg, #d4dbe6, #fbffff);
+      box-shadow: -2px -2px 0px #d4dbe6,
+        2px 2px 0px #ffffff;
+    }
+
+    button:active {
+      border-radius: 64px;
+      background: #ebf3ff;
+      box-shadow: inset -2px -2px 0px #ffffff,
+        inset 1px 0px 0px #d4dbe6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex justify-center min-h-screen items-center">
+
+    <div id="calculator"
+      class="bg-blue-50 bg-opacity-60 opacity-80 grid-cols-6 grid-rows-4 shadow-lg rounded-2xl ring-blue-300 ring-2 ring-opacity-20">
+      <div id="logo" class="text-blue-300  font-mono  ">
+        <p class="ml-5 mt-5">Calculator</p>
+        <p class="text-right mr-5" id="powerState">Power:Off</p>
+      </div>
+      <label id="tips" class="ml-5 text-xs text-red-700"></label>
+      <div class="col-span-4 m-5">
+        <input id="display" autocomplete="off" value="" readonly
+          class="focus:border-blue-400 text-blue-300 text-right text-2xl focus:outcol-span-4 m-5-none w-full rounded;" />
+      </div>
+      <div class="col-span-4 m-5">
+        <button data-action="switch" class="text-red-700 py-2 rounded-full text-xl w-20 font-thin">Power</button>
+        <button data-action="clear" class="py-2 rounded-full text-xl w-20 font-thin">AC</button>
+        <button data-action="operator" class="py-2 rounded-full text-xl w-20 font-thin">%</button>
+        <button data-action="operator" class="py-2 rounded-full text-xl w-20 font-thin">÷</button>
+      </div>
+      <div class="col-span-4 m-5">
+        <button data-action="number" class="py-2 rounded-full text-xl w-20 font-thin">7</button>
+        <button data-action="number" class="py-2 rounded-full text-xl w-20 font-thin">8</button>
+
+        <button data-action="number" class="py-2 rounded-full text-xl w-20 font-thin">9</button>
+        <button data-action="operator" class="py-2 rounded-full text-xl w-20 font-thin">×</button>
+      </div>
+      <div class="col-span-4 m-5">
+        <button data-action="number" class="py-2 rounded-full text-xl w-20 font-thin">4</button>
+        <button data-action="number" class="py-2 rounded-full text-xl w-20 font-thin">5</button>
+        <button data-action="number" class="py-2 rounded-full text-xl w-20 font-thin">6</button>
+        <button data-action="operator" class="py-2 rounded-full text-xl w-20 font-thin">-</button>
+      </div>
+      <div class="col-span-4 m-5">
+        <button data-action="number" class="py-2 rounded-full text-xl w-20 font-thin">1</button>
+        <button data-action="number" class="py-2 rounded-full text-xl w-20 font-thin">2</button>
+        <button data-action="number" class="py-2 rounded-full text-xl w-20 font-thin">3</button>
+        <button data-action="operator" class="py-2 rounded-full text-xl w-20 font-thin">+</button>
+      </div>
+      <div class="col-span-4 m-5">
+        <button class="py-2  rounded-full  text-xl font-thin" data-action="number" style="width: 10.25rem;">0</button>
+        <button data-action="dot" class="py-2 rounded-full text-xl w-20 font-thin">.</button>
+        <button data-action="equal" class="py-2 rounded-full text-xl w-20 font-thin">=</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/calculator.js"></script>
+  <script>
+    const title = window.parent.document.querySelector('.m-title>p');
+
+
+    if (title) {
+      title.innerHTML = `计算器`;
+      title.classList.add('animate__animated', 'animate__jackInTheBox');
+    }
+  </script>
+</body>
+
+</html>

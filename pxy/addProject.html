@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加项目</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body>
+
+    <!-- todo list by tailwind css-->
+    <div class="container mx-auto">
+        <div class="flex justify-center">
+            <div class="w-full max-w-sm">
+                <div class="flex flex-col break-words bg-white border border-2 rounded shadow-md">
+                    
+                    <div class="w-full p-6">
+                        <form class="needs-validation" action="">
+                            <div class="flex flex-wrap mb-2">
+                                <label for="title" class="block text-gray-700 text-sm font-bold mb-2">
+                                    标题
+                                </label>
+                                <input type="text" name="title" id="title"
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    required>
+
+                            </div>
+                            <div class="flex flex-wrap mb-2">
+                                <label for="content" class="block text-gray-700 text-sm font-bold mb-2">
+                                    内容
+                                </label>
+                                <textarea name="content" id="content"
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                    rows="2" required></textarea>
+
+                            </div>
+                            <div class="flex flex-wrap mb-2">
+                                <label for="date" class="block text-gray-700 text-sm font-bold mb-2">
+                                    截止日期
+                                </label>
+                                <input type="date" name="date" id="date"
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                    required>
+
+                            </div>
+                            <div class="flex flex-wrap mb-2">
+                                <label for="time" class="block text-gray-700 text-sm font-bold mb-2">
+                                    时间
+                                </label>
+                                <input type="time" name="time" id="time"
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                    required>
+
+                            </div>
+                            <div class="flex flex-wrap mb-2">
+                                <label for="progress" class="block text-gray-700 text-sm font-bold mb-2">
+                                    进度
+                                </label>
+                                <select name="progress" id="progress"
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                    required>
+                                    <option value="0">0%</option>
+                                    <option value="1">10%</option>
+                                    <option value="2">20%</option>
+                                    <option value="3">30%</option>
+                                    <option value="4">40%</option>
+                                    <option value="5">50%</option>
+                                    <option value="6">60%</option>
+                                    <option value="7">70%</option>
+                                    <option value="8">80%</option>
+                                    <option value="9">90%</option>
+                                    <option value="10">100%</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-wrap mb-2">
+                                <label for="remind" class="block text-gray-700 text-sm font-bold mb-2">
+                                    提醒
+                                </label>
+                                <select name="remind" id="remind"
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                    required>
+                                    <option value="1">提前1天</option>
+                                    <option value="2">提前2天</option>
+                                    <option value="3">提前3天</option>
+                                    <option value="4">提前1周</option>
+                                    <option value="5">提前2周</option>
+                                    <option value="6">提前3周</option>
+                                    <option value="7">提前1月</option>
+                                    <option value="8">提前2月</option>
+                                    <option value="9">提前3月</option>
+                                </select>
+
+                            </div>
+
+                            <div class="flex flex-wrap mb-2">
+                                <!-- 提交项目 -->
+                                <button
+                                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                    type="submit">
+                                    提交
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    const title = window.parent.document.querySelector('.m-title>p');
+
+
+    if (title) {
+        title.innerHTML = ` 添加工程`;
+        title.classList.add('animate__animated', 'animate__jackInTheBox');
+    }
+</script>
+
+</html>

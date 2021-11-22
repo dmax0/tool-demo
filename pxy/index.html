@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>DagonMax</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="stylesheet" href="assets/fontawesome-5.15.4/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="logo">
+                <a href="/"><img src="images/logo.png"></a>
+            </div>
+            <div class="msg">
+                <button id="me">
+                    <img src="images/jg.jpg">
+                </button>
+                <div class="msgR">
+                    <h2 id="username"></h2>
+                    <p id="email"></p>
+                </div>
+
+            </div>
+            <div class="nav">
+                <div class="navlist">
+                    <button class="
+                    
+                    hover:text-blue-400
+                    focus:shadow-outline
+                    focus:text-blue-600" id="goToIndex">
+                        <i class="fa fa-outdent"></i> 首页
+                    </button>
+
+                </div>
+                <div class="navlist">
+                    <button class="
+                    hover:text-blue-400
+                    focus:shadow-outline
+                    focus:text-blue-600 " id="plan">
+                        <i class="fa fa-th-large"></i>计划
+                    </button>
+                </div>
+                <div class="navlist">
+                    <button class="
+                    
+                    hover:text-blue-400
+                    focus:shadow-outline
+                    focus:text-blue-600" id="schedule">
+                        <i class="fas fa-tasks"></i>课程表
+                    </button>
+                </div>
+                <div class="navlist">
+                    <button class="
+                    
+                    hover:text-blue-400
+                    focus:shadow-outline
+                    focus:text-blue-600" id="project">
+                        <i class="fa fa-tag"></i>项目
+                    </button>
+                </div>
+
+                <div class="navlist" id="dropdown">
+                    <button class="
+                    hover:text-blue-400
+                    focus:shadow-outline
+                    focus:text-blue-600" id="tool">
+                        <i class="fas fa-toolbox"></i>工具箱<i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                    <ul class="dropdown-menu absolute hidden  pt-1" id="dropdown-menu">
+                        <li class="ml-6 hover:text-blue-400 focus:shadow-outline focus:text-blue-600 ">
+                            <button id="calculator">
+                                <i class="fas fa-calculator"></i>计算器
+                            </button>
+                        </li>
+                        <li class="ml-6 hover:text-blue-400 focus:shadow-outline focus:text-blue-600 ">
+                            <button id="addTools">
+                                <i class="fas fa-plus"></i>添加工具
+                            </button>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <button  class="logout">
+                <i class="fas fa-sign-out-alt"></i>退出
+            </button>
+        </div>
+        
+    </div>
+
+    <div class="m-title">
+        <button onclick="history.go(-1)"><i class="fas fa-arrow-circle-left"></i></button>
+        <p>Today's Plan</p>
+        <button onclick="history.go(1)"><i class="fas fa-arrow-circle-right"></i></button>
+    </div>
+    <div class="iframeDiv">
+        <div class="m">
+            <iframe frameborder="0" name="mid" src="home.html" class="">
+
+            </iframe>
+        </div>
+    </div>
+    <div class="right border-l-2">
+        <a class="shandian ">
+            <i class="fa fa-bolt"></i>
+        </a>
+        <div class="rightnav">
+            <button class="
+                
+                hover:text-blue-400
+                focus:text-blue-600
+                " id="addProject">
+                <span>
+                    <i class="fas fa-plus"></i>
+                </span>
+                <p>添加<br />工程
+                </p>
+            </button>
+            <button class="
+                
+                hover:text-blue-400
+                focus:text-blue-600
+                ">
+                <span>
+                    <i class="fa fa-tasks"></i>
+                </span>
+                <p>讨论 <br>
+                    组
+                </p>
+            </button>
+        </div>
+        <div class="ren">
+            <button class="pxy">
+                <div class="relative w-10 h-10">
+                    <img class="rounded-full border border-gray-100 shadow-sm" src="images/pxy.jpg" alt="头像" />
+                    <div
+                        class="absolute top-0 right-0 h-3 w-3 my-1 border-2 border-white rounded-full bg-green-400 z-2">
+                    </div>
+                </div>
+            </button>
+            <button>
+                <img class="rounded-full border border-gray-100 shadow-sm" src="images/lsb.jpg" alt="头像" />
+            </button>
+            <button>
+                <img class="rounded-full border border-gray-100 shadow-sm" src="images/ks.jpg" alt="头像" />
+            </button>
+            <button class="addtxr" id="addPeople">
+                <i class="fas fa-plus"></i>
+            </button>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="assets/js/change.js"></script>
+<script src="assets/js/controller.js"></script>
+<script src="assets/js/index.js"></script>
+
+</html>

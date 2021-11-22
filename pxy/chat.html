@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>chatting with</title>
+	<link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+
+<body class="flex flex-col items-center justify-center w-screen min-h-screen  text-gray-800 p-2 rounded">
+	<div class="flex flex-col flex-grow w-full max-w-xl bg-white shadow-xl rounded-lg overflow-hidden">
+		<div class=" text-center font-extrabold">
+			裴先易
+		</div>
+		<div id="chat_form" class="flex flex-col flex-grow h-0 p-4 overflow-auto">
+			<div class="flex w-full mt-2 space-x-3 max-w-xs">
+				<img src="images/pxy.jpg" alt="头像" class="rounded-full flex-shrink-0 h-10 w-10">
+				<div>
+					<div class="bg-gray-300 p-3 rounded-r-lg rounded-bl-lg">
+						<p class="text-sm">吃饭了么</p>
+					</div>
+					<span class="text-xs text-gray-500 leading-none">8:15</span>
+				</div>
+			</div>
+
+			<div class="flex w-full mt-2 space-x-3 max-w-xs ml-auto justify-end">
+				<div>
+					<div class="bg-blue-600 text-white p-3 rounded-l-lg rounded-br-lg">
+						<p class="text-sm">没有</p>
+					</div>
+					<span class="text-xs text-gray-500 leading-none">14:22</span>
+				</div>
+				<img src="images/jg.jpg" alt="头像" class="rounded-full flex-shrink-0 h-10 w-10">
+			</div>
+		</div>
+		<div class="bg-gray-300 p-4">
+			<input id="sendinput" class="flex items-center h-10 w-full rounded px-3 text-sm" type="text" autocomplete="off"
+				placeholder="输入...">
+		</div>
+	</div>
+
+</body>
+<script src="assets/js/chat.js"></script>
+
+</html>
