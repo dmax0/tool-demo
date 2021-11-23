@@ -1,0 +1,18 @@
+#right img{
+	width: 150px;
+	height: 150px;
+}
+#main{
+	width: 30%;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+}
+#right{
+	width: 50%;
+	height: auto;
+	margin: 0px;
+	padding: 0px;
+	color: #DC143C;
+	float: right;
+}

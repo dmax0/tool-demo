@@ -1,0 +1,44 @@
+body{
+	background: lightpink;
+}
+#top {
+	width: 100%;
+	font-size: 12px;
+	background: #DC143C;
+}
+
+.top_in {
+	width: 978px;
+	height: 40px;
+	margin: 0 auto;
+}
+
+#top img{
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#top ul{
+	width: 898px;
+	height: 40px;
+	margin: 0;
+	padding-left: 130px;
+	list-style: none;
+}
+
+#top li {
+	float: left;
+}
+
+#top ul li a {
+	line-height: 40px;
+	font-size: bold;
+	margin: 0 10px;
+	color: white;
+	text-decoration: none;
+}
+
+#top ul li a:hover {
+	color: blue;
+}

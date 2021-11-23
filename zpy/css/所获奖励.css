@@ -1,0 +1,22 @@
+#bottom #bottom1 span{
+	font-size: 8px;
+	color: black;
+}
+#bottom3{
+	width: 15%;
+	height: 100px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+#bottom4{
+	margin: 0px;
+	padding: 0px;
+}
+#bottom4 a{
+	text-decoration: none;
+	color: #000000;
+}
+#bottom4 a:hover{
+	color: #0000FF;
+}

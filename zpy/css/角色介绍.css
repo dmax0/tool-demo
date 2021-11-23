@@ -1,0 +1,11 @@
+#center img{
+	width: 130px;
+	height: 230px;
+	border: #DC143C 2px solid;
+}
+#center ul li{
+	list-style: none;
+	float: left;
+	margin-top: 0px;
+	
+}
