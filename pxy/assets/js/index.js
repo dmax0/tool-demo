@@ -129,5 +129,5 @@ logout.addEventListener('click', () => {
     main_div.classList.add('animated', 'animate__hinge');
     setTimeout(() => {
         document.location.href = './login.html';
-    }, 1500);
+    }, 1900);
 });
