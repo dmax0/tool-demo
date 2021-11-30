@@ -117,28 +117,4 @@ window.addEventListener('load', () => {
 });
 
 
-// message二级菜单
-const message = document.querySelector('#message');
-const secMessage = document.querySelector('#secMessage');
 
-message.addEventListener( 'mouseout', () => {
-    if (secMessage.classList.contains('block')) {
-        secMessage.classList.remove('block');
-        secMessage.classList.add('hidden');
-    }
-});
-message.addEventListener( 'mouseover', () => {
-    if (secMessage.classList.contains('hidden')) {
-        secMessage.classList.remove('hidden');
-        secMessage.classList.add('block');
-    }
-});
-
-secMessage.addEventListener( 'mouseover', () => {
-    secMessage.classList.remove('hidden');
-    secMessage.classList.add('block');
-});
-secMessage.addEventListener( 'mouseout', () => {
-    secMessage.classList.add('hidden');
-    secMessage.classList.remove('block');
-});
