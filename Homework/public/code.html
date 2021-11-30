@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code play</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/code.css">
+
+    <link rel="stylesheet" href="../src/codemirror/lib/codemirror.css">
+    <script src="../src/codemirror/lib/codemirror.js"></script>
+
+    <!--引入css文件，用以支持主题-->
+    <link rel="stylesheet" href="../src/codemirror/theme/eclipse.css">
+    <link rel="stylesheet" href="../src/codemirror/theme/3024-night.css">
+    <link rel="stylesheet" href="../src/codemirror/theme/3024-day.css">
+    <link rel="stylesheet" href="../src/codemirror/theme/dracula.css">
+
+    <!--支持代码折叠-->
+    <link rel="stylesheet" href="../src/codemirror/addon/fold/foldgutter.css" />
+    <script src="../src/codemirror/addon/fold/foldcode.js"></script>
+    <script src="../src/codemirror/addon/fold/foldgutter.js"></script>
+    <script src="../src/codemirror/addon/fold/brace-fold.js"></script>
+    <script src="../src/codemirror/addon/fold/comment-fold.js"></script>
+
+    <!--全屏模式-->
+    <link rel="stylesheet" href="../src/codemirror/addon/display/fullscreen.css">
+    <script src="../src/codemirror/addon/display/fullscreen.js"></script>
+
+    <!--括号匹配-->
+    <script src="../src/codemirror/addon/edit/matchbrackets.js"></script>
+
+    <!--自动补全-->
+    <link rel="stylesheet" href="../src/codemirror/addon/hint/show-hint.css">
+    <script src="../src/codemirror/addon/hint/show-hint.js"></script>
+    <script src="../src/codemirror/addon/hint/anyword-hint.js"></script>
+
+
+    <script src="../src/codemirror/mode/clike/clike.js"></script>
+</head>
+
+<body class="">
+    <!-- 水平导航栏 -->
+  <nav id="header" class>
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2">
+      <div class="pl-4 flex items-center">
+        <div class="logo m-4">
+          <button id="logo">
+            Let's Coding
+          </button>
+        </div>
+      </div>
+
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle"
+          class="flex items-center px-3 py-2 border rounded text-gray-500  border-gray-600 hover:text-gray-700 hover:border-green-500 appearance-none focus:outline-none">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>菜单</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0  p-4 lg:p-0 z-20"
+        id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <span class="text-gray-500 text-xs mr-1">夜间模式</span>
+          <label class="switch mr-2 mt-1">
+            <input type="checkbox" id="nightMode">
+            <span class="slider"></span>
+          </label>
+          
+          <li class="mr-6 active">
+            <a class="inline-block py-2 px-4   no-underline" href="code.html">新建</a>
+          </li>
+
+          <li class="mr-6">
+            <a class="inline-block  no-underline  py-2 px-4 " href="shop.html">商城</a>
+          </li>
+          <li class="mr-6">
+            <a class="inline-block  no-underline  py-2 px-4" href="discussion.html">讨论</a>
+          </li>
+          <li class="mr-6 relative">
+            <a class="inline-block  no-underline  py-2 px-4 flex" href="chat.html" id="message">
+                <span>消息</span>
+                <svg t="1638248839848" class="icon mt-2" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="6710" width="12" height="12">
+                <path
+                    d="M966.4 323.2c-9.6-9.6-25.6-9.6-35.2 0l-416 416-425.6-416c-9.6-9.6-25.6-9.6-35.2 0-9.6 9.6-9.6 25.6 0 35.2l441.6 432c9.6 9.6 25.6 9.6 35.2 0l435.2-432C976 345.6 976 332.8 966.4 323.2z"
+                    p-id="6711" fill="#ffffff"></path>
+            </svg>
+            </a>
+    
+        </li>
+
+          <li class="mr-6">
+            <a class="inline-block  no-underline  py-2 px-4" href="login.html">登录</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- 主体内容 -->
+
+    <!-- 标题 -->
+    <div class="mt-20 ml-6 text-2xl text-black text-center lg:text-left">
+        <span>新建代码片段</span>
+    </div>
+    <!-- 代码编辑器 -->
+    <div class="flex w-full flex-col lg:flex-row">
+
+
+
+        <div id="codeEditor" class="border border-4 mt-4 relative w-full lg:w-1/2 m-2 ">
+            <div class="w-full lg:1/2 ">
+                <textarea id="code"></textarea>
+            </div>
+            
+            <select onchange="selectTheme()" id="select" class="lg:block hidden">
+                <option selected="">default</option>
+                <option>3024-day</option>
+                <option>3024-night</option>
+                <option>eclipse</option>
+                <option>dracula</option>
+            </select>
+
+        </div>
+        <!-- 其他信息 -->
+        <div class="lg:w-1/2 lg:mt-4 mt-10 w-full text-sm ">
+            <div class="p-6 shadow rounded-md text-left">
+                <label class="block">
+                    <span class="text-gray-700">标题:</span>
+                    <input class=" mt-1 block w-full  border-b-2  outline-none" type="text" />
+                </label>
+                <label class="block">
+                    <span class="text-gray-700">描述:</span>
+                    <textarea class=" mt-1  w-full  border-2  outline-none " rows="5" ></textarea>
+                </label>
+
+                <div class="mt-4">
+                    <span class="text-gray-700">选择分类:</span>
+                    <div class="mt-2">
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio" name="accountType" value="personal" />
+                            <span class="ml-2">C/C++</span>
+                        </label>
+                        <label class="inline-flex items-center ml-6">
+                            <input type="radio" class="form-radio" name="accountType" value="busines" />
+                            <span class="ml-2">C/C++</span>
+                        </label>
+                    </div>
+                </div>
+
+               
+
+                <div class="flex mt-2">
+                    <label class="flex items-center">
+                        <span>是否公开：</span>
+                        <div class="checkbox-con">
+                            <input id="checkbox" type="checkbox">
+                        </div>
+                        
+                    </label>
+                </div>
+
+                <div class="flex  flex-col">
+                        <label class="block  font-medium text-gray-700">
+                          上传图片：(详情顶部)
+                        </label>
+                        <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                          <div class="space-y-1 text-center">
+                            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="True">
+                              <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="flex text-sm text-gray-600">
+                              <label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                <span>选择图片上传</span>
+                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                              </label>
+                              <p class="pl-1">或&nbsp;拖动上传</p>
+                            </div>
+                            <p class="text-xs text-gray-500">
+                              支持PNG, JPG, GIF，大小限制10MB
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button class="hidden lg:block lg-right-1/2 w-1/2 lg:w-auto mt-10 " id="send">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>发布</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="flex flex-wrap items-center md:justify-between justify-center bg-black text-white">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="text-lg  py-1">
+            Copyright © <span id="get-current-year">2021</span>
+            <a href="index.html" class="text-white ">Let's Coding</a>
+          </div>
+        </div>
+      </div>
+</body>
+<script type="text/javascript">
+
+    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        mode: "text/x-c++src",
+        lineNumbers: true,
+        styleActiveLine: true,
+        matchBrackets: true,
+        theme: "default",
+        foldGutter: true,
+        gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+        extraKeys: {
+            "F11": function (cm) {
+                cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                document.getElementById("header").classList.toggle("hidden");
+            },
+            "Esc": function (cm) {
+                if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+
+            }
+        },
+        lineWrapping: true,
+        autoCloseBrackets: true,
+
+
+    });
+    var input = document.getElementById("select");
+    function selectTheme() {
+        var theme = input.options[input.selectedIndex].textContent;
+        editor.setOption("theme", theme);
+        location.hash = "#" + theme;
+    }
+    var choice = (location.hash && location.hash.slice(1)) ||
+        (document.location.search &&
+            decodeURIComponent(document.location.search.slice(1)));
+    if (choice) {
+        input.value = choice;
+        editor.setOption("theme", choice);
+    }
+    CodeMirror.on(window, "hashchange", function () {
+        var theme = location.hash.slice(1);
+        if (theme) { input.value = theme; selectTheme(); }
+    });
+    editor.setValue("#include <stdio.h>\n\nint main()\n{\n    printf(\"Hello, World!\");\n    return 0;\n}");
+    // 发布代码
+    const send = document.querySelector('#send');
+
+</script>
+
+
+<script src="js/index.js"></script>
+
+</html>

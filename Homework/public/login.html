@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <title>用户登录</title>
+    <style>
+        body {
+            font-family: "华文细黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+<!-- 水平导航栏 -->
+<nav id="header" class>
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2">
+        <div class="pl-4 flex items-center">
+            <div class="logo m-4">
+                <button id="logo">
+                    Let's Coding
+                </button>
+            </div>
+        </div>
+
+        <div class="block lg:hidden pr-4">
+            <button id="nav-toggle"
+                class="flex items-center px-3 py-2 border rounded text-gray-500  border-gray-600 hover:text-gray-700 hover:border-green-500 appearance-none focus:outline-none">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>菜单</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0  p-4 lg:p-0 z-20"
+            id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                <span class="text-gray-500 text-xs mr-1">夜间模式</span>
+                <label class="switch mr-2 mt-1">
+                    <input type="checkbox" id="nightMode">
+                    <span class="slider"></span>
+                </label>
+
+                <li class="mr-6 ">
+                    <a class="inline-block py-2 px-4   no-underline" href="code.html">新建</a>
+                </li>
+
+                <li class="mr-6">
+                    <a class="inline-block  no-underline  py-2 px-4 " href="shop.html">商城</a>
+                  </li>
+                <li class="mr-6">
+                    <a class="inline-block  no-underline  py-2 px-4" href="discussion.html">讨论</a>
+                </li>
+                <li class="mr-6 relative">
+                    <a class="inline-block  no-underline  py-2 px-4 flex" href="chat.html" id="message">
+                        <span>消息</span>
+                        <svg t="1638248839848" class="icon mt-2" viewBox="0 0 1024 1024" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" p-id="6710" width="12" height="12">
+                            <path
+                                d="M966.4 323.2c-9.6-9.6-25.6-9.6-35.2 0l-416 416-425.6-416c-9.6-9.6-25.6-9.6-35.2 0-9.6 9.6-9.6 25.6 0 35.2l441.6 432c9.6 9.6 25.6 9.6 35.2 0l435.2-432C976 345.6 976 332.8 966.4 323.2z"
+                                p-id="6711" fill="#ffffff"></path>
+                        </svg>
+                    </a>
+
+                </li>
+
+                <li class="mr-6 active">
+                    <a class="inline-block  no-underline  py-2 px-4" href="#">登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+    <div class="flex items-center p-4  xl:justify-center mt-20 ">
+        <div
+            class="flex flex-col overflow-hidden  rounded-md shadow-lg  lg:flex-row lg:flex-1 lg:max-w-screen-md w-full">
+            <div
+                class="p-4  text-white bg-black md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
+                <div class="my-3 text-4xl font-bold tracking-wider text-center animate__animated animate__flipInY ">
+                    <a href="index.html">Let's Coding</a>
+                </div>
+                <p class="mt-6 font-normal text-center text-gray-300 md:mt-0">
+                    一起来享受编码的乐趣吧！
+                </p>
+                <p class="flex flex-col items-center justify-center mt-10 text-center">
+                    <span>还没有账号？</span>
+                    <a href="register.html" class="hover:text-blue-500">立即注册</a>
+                </p>
+            </div>
+            <div class="p-5  md:flex-1">
+                <h3 class="my-4 text-2xl font-semibold text-gray-700">登录</h3>
+                <form class="flex flex-col space-y-5" id="form">
+                    <div class="flex flex-col space-y-1">
+                        <label for="username" class="text-sm font-semibold text-gray-500">账号</label>
+                        <input type="username" name="username" autofocus required
+                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                    </div>
+                    <div class="flex flex-col space-y-1">
+                        <div class="flex items-center justify-between">
+                            <label for="password" class="text-sm font-semibold text-gray-500">密码</label>
+                            <a href="#" class="text-sm text-blue-600 hover:underline focus:text-blue-800">忘记密码?</a>
+                        </div>
+                        <input type="password" name="password" required
+                            class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200" />
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <input type="checkbox" name="remember"
+                            class="w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200" />
+                        <label for="remember" class="text-sm font-semibold text-gray-500">记住我</label>
+                    </div>
+                    <div>
+                        <button type="submit" id="submit"
+                            class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-black rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4">
+                            登录
+                        </button>
+                    </div>
+                    <div class="flex flex-col space-y-5">
+                        <span class="flex items-center justify-center space-x-2">
+                            <span class="h-px  w-14"></span>
+                            <span class="font-normal text-gray-500">其他方式登录</span>
+                            <span class="h-px  w-14"></span>
+                        </span>
+                        <div class="flex flex-col space-y-4">
+                            <a href="#"
+                                class="flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-gray-800 rounded-md group hover:bg-gray-800 focus:outline-none">
+                                <span>
+                                    <svg class="w-5 h-5 text-gray-800 fill-current group-hover:text-white"
+                                        viewBox="0 0 16 16" version="1.1" aria-hidden="true">
+                                        <path fill-rule="evenodd"
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                                        </path>
+                                    </svg>
+                                </span>
+                                <span class="text-sm font-medium text-gray-800 group-hover:text-white">Github</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center justify-center px-4 py-2 space-x-2 transition-colors duration-300 border border-blue-500 rounded-md group hover:bg-blue-400 focus:outline-none">
+                                <span>
+                                    <svg t="1638088774625" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" p-id="2821" width="20" height="20">
+                                        <path
+                                            d="M512 0C229.224296 0 0 229.224296 0 512s229.224296 512 512 512 512-229.224296 512-512S794.775704 0 512 0zM801.261037 668.86163c-21.731556 18.640593-49.948444-61.345185-54.006519-49.038222-9.879704 29.923556-14.506667 49.929481-43.633778 82.507852-1.554963 1.744593 33.659259 14.468741 43.633778 41.642667 9.557333 26.017185 28.141037 67.26163-93.487407 80.213333-71.35763 7.585185-122.936889-38.020741-128.075852-37.584593-9.53837 0.83437-5.290667 0-15.530667 0-8.38163 0-8.931556 0.606815-16.820148 0-2.161778-0.170667-25.884444 37.584593-131.963259 37.584593-82.223407 0-103.518815-51.749926-86.983111-80.213333 16.535704-28.463407 44.126815-36.750222 40.239407-41.263407-19.152593-22.186667-32.350815-45.909333-40.239407-67.356444-1.953185-5.347556-3.584-10.543407-4.873481-15.530667-2.996148-11.45363-25.884444 67.204741-50.460444 49.038222-24.576-18.166519-22.376296-64.417185-6.46637-108.676741 16.042667-44.619852 56.471704-87.589926 56.926815-97.071407 1.611852-35.290074-3.489185-41.14963 0-50.422519 7.755852-20.764444 17.199407-12.8 17.199407-23.570963 0-135.736889 100.864-245.76 225.28-245.76s225.28 110.042074 225.28 245.76c0 5.195852 13.520593 0 19.986963 23.570963 1.327407 4.873481 2.23763 23.665778 0.663704 50.422519-0.739556 12.856889 34.266074 28.501333 52.375704 97.071407C828.434963 628.754963 810.30637 661.105778 801.261037 668.86163z"
+                                            p-id="2822" fill="#1296db"></path>
+                                    </svg>
+                                </span>
+                                <span class="text-sm font-medium text-blue-500 group-hover:text-white">QQ</span>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+<script src="js/login.js"></script>
+
+</html>

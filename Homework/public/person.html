@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>个人中心</title>
+   <link rel="stylesheet" href="css/tailwind.css">
+   <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+   <!-- 水平导航栏 -->
+   <nav id="header" class>
+      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2">
+         <div class="pl-4 flex items-center">
+            <div class="logo m-4">
+               <button id="logo">
+                  Let's Coding
+               </button>
+            </div>
+         </div>
+
+         <div class="block lg:hidden pr-4">
+            <button id="nav-toggle"
+               class="flex items-center px-3 py-2 border rounded text-gray-500  border-gray-600 hover:text-gray-700 hover:border-green-500 appearance-none focus:outline-none">
+               <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <title>菜单</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+               </svg>
+            </button>
+         </div>
+
+         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0  p-4 lg:p-0 z-20"
+            id="nav-content">
+            <ul class="list-reset lg:flex justify-end flex-1 items-center">
+               <span class="text-gray-500 text-xs mr-1">夜间模式</span>
+               <label class="switch mr-2 mt-1">
+                  <input type="checkbox" id="nightMode">
+                  <span class="slider"></span>
+               </label>
+
+               <li class="mr-6 ">
+                  <a class="inline-block py-2 px-4   no-underline" href="code.html">新建</a>
+               </li>
+
+               <li class="mr-6">
+                  <a class="inline-block  no-underline  py-2 px-4 " href="shop.html">商城</a>
+                </li>
+               <li class="mr-6">
+                  <a class="inline-block  no-underline  py-2 px-4" href="discussion.html">讨论</a>
+               </li>
+               <li class="mr-6 relative">
+                  <a class="inline-block  no-underline  py-2 px-4 flex" href="chat.html" id="message">
+                     <span>消息</span>
+                     <svg t="1638248839848" class="icon mt-2" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="6710" width="12" height="12">
+                        <path
+                           d="M966.4 323.2c-9.6-9.6-25.6-9.6-35.2 0l-416 416-425.6-416c-9.6-9.6-25.6-9.6-35.2 0-9.6 9.6-9.6 25.6 0 35.2l441.6 432c9.6 9.6 25.6 9.6 35.2 0l435.2-432C976 345.6 976 332.8 966.4 323.2z"
+                           p-id="6711" fill="#ffffff"></path>
+                     </svg>
+                  </a>
+
+               </li>
+
+               <li class="mr-6 active">
+                  <a class="inline-block  no-underline  py-2 px-4" href="login.html">登录</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
+
+
+
+   <div class="0">
+
+      <div class="flex overflow-hidden pt-24 ">
+         <aside id="sidebar" class=" border ml-4 rounded border-gray-100 shadow   z-20 top-0 left-0  flex lg:flex flex-shrink-0 flex-col  transition-width duration-75
+            lg:w-72 w-24 h-full" aria-label="Sidebar">
+            <div class="relative flex-1 flex flex-col min-h-0   pt-0">
+               <div class="flex-1 flex   overflow-y-auto">
+                  <div class="flex flex-col w-full  mx-auto  rounded-lg ">
+
+                     <div class=" w-full lg:flex flex-row hidden justify-center items-center">
+                        <div class="w-full bg-white  shadow hover:shadow-inner">
+                           <a href="person.html" class=" mt-2 text-xl text-blue-400">
+                              <img class="w-16 mx-auto rounded-full border-8 border-white" src="image/avatar.jpg"
+                                 alt="">
+                              <div class="text-center">DragonMax</div>
+                           </a>
+                           <div class="text-center mt-2 font-light text-sm">四川轻化工大学</div>
+                           <div class="text-center font-normal text-lg">Junior</div>
+                           <div class="px-6 text-center mt-2 font-light text-sm">
+                              <p>
+                                 dm075@qq.com
+                              </p>
+                           </div>
+                           <hr class="mt-8">
+                           <div class="flex p-4">
+                              <div class="w-1/2 text-center">
+                                 <span class="font-bold">1800 k</span>粉丝
+                              </div>
+                              <div class="w-0 border border-gray-300">
+
+                              </div>
+                              <div class="w-1/2 text-center">
+                                 <span class="font-bold">2000</span> 关注
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- 菜单 -->
+                     <ul class="mx-4 mt-4">
+                        <li class="flex lg:items-center items-start lg:w-auto w-8 bg-blue-400 text-white">
+                           <a href="code.html" class=" hover:shadow-inner  border w-full
+                           rounded  pt-2  lg:h-12"><span class=" flex justify-center mb-2">
+                                 <svg t="1638265195985" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" p-id="5243" width="24" height="24">
+                                    <path
+                                       d="M512 555.218314c-135.081535 0-244.952898-109.893876-244.952898-244.975411 0-135.060045 109.871363-244.952898 244.952898-244.952898s244.9969 109.893876 244.9969 244.952898C756.9969 445.325461 647.081535 555.218314 512 555.218314zM512 132.633786c-97.945753 0-177.609117 79.685877-177.609117 177.609117 0 97.945753 79.663364 177.63163 177.609117 177.63163s177.653119-79.685877 177.653119-177.63163C689.653119 212.319663 609.945753 132.633786 512 132.633786z"
+                                       p-id="5244" fill="#ffffff"></path>
+                                    <path
+                                       d="M915.490657 958.708971c-18.58938 0-33.67189-15.08251-33.67189-33.67189 0-203.915249-165.903517-369.818767-369.818767-369.818767S142.181233 721.121831 142.181233 925.037081c0 18.58938-15.08251 33.67189-33.67189 33.67189s-33.67189-15.08251-33.67189-33.67189c0-241.051031 196.111516-437.162548 437.162548-437.162548s437.162548 196.111516 437.162548 437.162548C949.162548 943.627485 934.080038 958.708971 915.490657 958.708971z"
+                                       p-id="5245" fill="#ffffff"></path>
+                                 </svg><span class="ml-2 hidden lg:block">个人资料</span>
+                              </span></a>
+                        </li>
+
+                        <li class="flex lg:items-center items-start lg:w-auto w-8 lg:mt-2 mt-6 ">
+                           <a href="code.html" class="hover:bg-gray-200 hover:shadow-inner  border w-full
+                           rounded  pt-2  lg:h-12"><span class=" flex justify-center mb-2">
+                                 <svg t="1638263986648" class="icon" viewBox="0 0 1027 1024" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" p-id="4193" width="24" height="24">
+                                    <path
+                                       d="M321.828571 226.742857c-14.628571-14.628571-36.571429-14.628571-51.2 0L7.314286 482.742857c-14.628571 14.628571-14.628571 36.571429 0 51.2l256 256c14.628571 14.628571 36.571429 14.628571 51.2 0 14.628571-14.628571 14.628571-36.571429 0-51.2L87.771429 512l234.057142-234.057143c7.314286-14.628571 7.314286-36.571429 0-51.2z m263.314286 0c-14.628571 0-36.571429 7.314286-43.885714 29.257143l-131.657143 497.371429c-7.314286 21.942857 7.314286 36.571429 29.257143 43.885714s36.571429-7.314286 43.885714-29.257143l131.657143-497.371429c7.314286-14.628571-7.314286-36.571429-29.257143-43.885714z m431.542857 256l-256-256c-14.628571-14.628571-36.571429-14.628571-51.2 0-14.628571 14.628571-14.628571 36.571429 0 51.2L936.228571 512l-234.057142 234.057143c-14.628571 14.628571-14.628571 36.571429 0 51.2 14.628571 14.628571 36.571429 14.628571 51.2 0l256-256c14.628571-14.628571 14.628571-43.885714 7.314285-58.514286z"
+                                       fill="" p-id="4194"></path>
+                                 </svg><span class="ml-2 hidden lg:block">我的代码</span>
+                              </span></a>
+                        </li>
+                        <li class="flex lg:items-center items-start lg:w-auto w-8 lg:mt-2 mt-6">
+                           <a href="code.html" class="hover:bg-gray-200 hover:shadow-inner  border w-full
+                           rounded  pt-2  lg:h-12"><span class=" flex justify-center mb-2">
+                                 <svg t="1638265267527" class="icon" viewBox="0 0 1059 1024" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" p-id="6138" width="24" height="24">
+                                    <path
+                                       d="M253.488042 1024c-16.9 0-33.2875-5.1125-47.6125-15.3625-26.625-18.425-39.425-49.6625-34.3125-81.925l40.9625-251.9c1.5375-10.2375-1.5375-20.475-8.7-27.65L28.213042 466.4375c-22.0125-22.525-29.1875-55.3-19.45-84.9875 9.725-29.7 35.325-51.2 66.05-55.8125l237.575-36.35c10.75-1.5375 19.4625-8.1875 24.0625-17.925L441.388042 48.125c13.825-29.7 42.5-48.125 75.2625-48.125s61.4375 18.4375 75.2625 48.125l104.45 223.2375c4.6125 9.725 13.825 16.375 24.0625 17.925L958.000542 325.625a82.355 82.355 0 0 1 66.05 55.8125c10.2375 29.7 2.5625 62.4625-19.45 84.9875l-175.625 180.7375c-7.1625 7.175-10.2375 17.925-8.7 27.65l40.9625 251.9c5.125 31.75-8.1875 63.4875-34.3 81.925-26.1125 18.4375-59.9 20.4875-88.0625 4.6125l-206.85-114.6875c-9.725-5.1125-20.9875-5.1125-30.7125 0l-207.3625 115.2c-12.8125 6.65-26.6375 10.2375-40.4625 10.2375zM516.650542 51.2c-12.8 0-23.55 7.1625-29.1875 18.4375L383.525542 292.875c-11.775 25.0875-35.325 43.0125-62.975 47.1l-237.575 36.35c-12.2875 2.05-21.5 9.7375-25.6 21.5-4.1 11.775-1.025 24.0625 7.675 32.775L240.688042 611.325c18.4375 18.95 26.625 45.5625 22.525 71.675L222.250542 934.9125c-2.05 12.8 3.075 24.575 13.3125 31.7375 10.2375 7.175 23.0375 7.6875 33.7875 1.5375l207.3625-115.2c25.0875-13.825 55.3-13.825 80.3875 0l207.3625 115.2c10.75 6.1375 23.55 5.625 33.8-1.5375 10.2375-7.1625 15.3625-18.95 13.3125-31.7375L770.625542 683.0125c-4.1-26.1125 4.1-52.7375 22.525-71.675l175.625-180.7375c8.7-8.7 11.2625-20.9875 7.675-32.775-4.0875-11.775-13.3125-19.9625-25.6-21.5l-237.5625-36.35c-27.65-4.0875-51.2-22.0125-62.975-47.1L545.838042 69.6375c-5.625-11.2625-16.375-18.4375-29.1875-18.4375z m0 0"
+                                       p-id="6139"></path>
+                                 </svg><span class="ml-2 hidden lg:block">我的收藏</span>
+                              </span></a>
+                        </li>
+                        <li class="flex lg:items-center items-start lg:w-auto w-8 lg:mt-2 mt-6 ">
+                           <a href="code.html" class="hover:bg-gray-200 hover:shadow-inner  border w-full
+                           rounded  pt-2  lg:h-12"><span class=" flex justify-center mb-2">
+                                 <svg t="1638266023668" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" p-id="7057" width="24" height="24">
+                                    <path
+                                       d="M704 405.333333v-128a21.333333 21.333333 0 0 1 42.666667 0v128h128a21.333333 21.333333 0 0 1 0 42.666667h-128v128a21.333333 21.333333 0 0 1-42.666667 0v-128h-128a21.333333 21.333333 0 0 1 0-42.666667h128z m149.333333 173.717334a21.333333 21.333333 0 0 1 42.666667 0V881.493333a64 64 0 0 1-98.794667 53.696l-273.088-176.96a21.333333 21.333333 0 0 0-23.189333 0l-274.197333 177.152A64 64 0 0 1 128 881.642667V234.666667a149.333333 149.333333 0 0 1 149.333333-149.333334h469.333334a149.333333 149.333333 0 0 1 149.333333 149.333334v43.946666a21.333333 21.333333 0 0 1-42.666667 0V234.666667a106.666667 106.666667 0 0 0-106.666666-106.666667H277.333333a106.666667 106.666667 0 0 0-106.666666 106.666667v646.976a21.333333 21.333333 0 0 0 32.917333 17.92l274.197333-177.173334a64 64 0 0 1 69.546667 0.064l273.066667 176.96A21.333333 21.333333 0 0 0 853.333333 881.493333V579.072z"
+                                       p-id="7058"></path>
+                                 </svg><span class="ml-2 hidden lg:block">我的订阅</span>
+                              </span></a>
+                        </li>
+                        <li class="flex lg:items-center items-start lg:w-auto w-8 lg:mt-2 mt-6 ">
+                           <a href="code.html" class="hover:bg-gray-200 hover:shadow-inner  border w-full
+                           rounded  pt-2  lg:h-12"><span class=" flex justify-center mb-2">
+                                 <svg t="1638266060890" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" p-id="8082" width="24" height="24">
+                                    <path
+                                       d="M822.72 415.424c0-175.296-164.032-317.952-365.44-317.952-201.536 0-365.44 142.656-365.44 317.952 0 105.152 59.008 202.368 158.336 261.824v102.528c0 6.272 3.456 12.032 8.96 14.912a16.448 16.448 0 0 0 17.344-0.832l46.656-30.72c0.768-0.512 1.408-1.088 2.176-1.728l53.504-35.712c26.624 5.056 52.928 7.68 78.464 7.68 201.472 0 365.44-142.656 365.44-317.952z m-365.504 284.032c-25.472 0-51.904-2.816-78.528-8.256a16.96 16.96 0 0 0-12.864 2.432l-61.632 41.216c-0.768 0.384-1.472 0.96-2.112 1.472l-18.048 12.032v-80.896a16.96 16.96 0 0 0-8.576-14.656c-93.76-52.928-149.76-141.632-149.76-237.376 0-156.672 148.672-284.032 331.584-284.032 182.784 0 331.648 127.424 331.648 284.032 0 156.672-148.864 284.032-331.712 284.032z m409.6-174.144a181.12 181.12 0 0 1 36.48 107.904c0 68.288-40.064 131.84-107.264 169.664a16.96 16.96 0 0 0-8.64 14.72v50.624l-5.824-3.776a9.088 9.088 0 0 0-1.792-1.408l-45.12-30.208c-3.776-2.432-8.448-3.456-12.8-2.432-79.296 16.448-156.096-1.536-213.312-44.48l-20.352 27.136c63.232 47.36 147.392 68.032 233.536 51.904l37.248 24.96c0.704 0.576 1.28 1.024 1.984 1.344l34.048 22.592a17.472 17.472 0 0 0 17.344 0.832 17.024 17.024 0 0 0 9.024-14.976V827.52c72.64-44.48 115.776-116.352 115.776-194.24 0-45.504-14.848-89.792-43.136-128l-27.2 20.032z"
+                                       p-id="8083"></path>
+                                 </svg><span class="ml-2 hidden lg:block">我的讨论</span>
+                              </span></a>
+                        </li>
+
+
+                     </ul>
+                  </div>
+
+               </div>
+            </div>
+         </aside>
+
+
+         <div id="main-content" class=" w-full relative overflow-y-auto lg:ml-32">
+            <main>
+               <!-- 个人资料表单 -->
+               <div class="flex flex-col lg:flex-row">
+                  <div class=" w-full">
+                     <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                        <div class="">
+                           <div class="font-bold text-xl mb-2">个人资料</div>
+
+                        </div>
+                        <div class="border w-full h-full">
+                           <div class="p-4">
+                              <form action="">
+                                 <div class="flex flex-wrap -mx-3 mb-6">
+                                    <div class="w-full px-3">
+                                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                          for="grid-first-name">
+                                          用户名
+                                       </label>
+                                       <input
+                                          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                          id="grid-first-name" type="text" placeholder="Jane">
+                                    </div>
+                                    <div class="w-full px-3">
+                                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                          for="grid-last-name">
+                                          姓名
+                                       </label>
+                                       <input
+                                          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                          id="grid-last-name" type="text" placeholder="Doe">
+                                    </div>
+                                 </div>
+                                 <!-- 修改密码 -->
+                                 <div class="flex flex-wrap -mx-3 mb-6">
+                                    <div class="w-full px-3">
+                                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                          for="grid-password">
+                                          新密码
+                                       </label>
+                                       <input
+                                          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                          id="grid-password" type="password" placeholder="******************">
+                                    </div>
+                                 </div>
+                                 <!-- 修改密码 -->
+                                 <div class="flex flex-wrap -mx-3 mb-6">
+                                    <div class="w-full px-3">
+                                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                          for="grid-password">
+                                          确认密码
+                                       </label>
+                                       <input
+                                          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                          id="grid-password" type="password" placeholder="******************">
+                                    </div>
+                                 </div>
+                                 <div class="flex flex-wrap -mx-3 mb-6">
+                                    <div class="w-full px-3">
+                                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                          for="grid-password">
+                                          <label
+                                             class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                             for="city">
+                                             地区
+                                          </label>
+                                          <select
+                                             class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                             id="grid-state">
+                                             <option>请选择</option>
+                                             <option>北京</option>
+                                             <option>上海</option>
+                                             <option>广州</option>
+                                             <option>深圳</option>
+                                             <option>杭州</option>
+                                             <option>南京</option>
+                                             <option>成都</option>
+                                             <option>武汉</option>
+                                          </select>
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <div class="flex flex-wrap -mx-3 mb-6">
+                                    <div class="w-full px-3">
+                                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                          for="grid-password">
+
+                                          <!-- 立即修改 -->
+                                          <button
+                                             class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                             type="button">
+                                             立即修改
+                                          </button>
+                                    </div>
+                                 </div>
+                           </div>
+            </main>
+
+         </div>
+      </div>
+
+   </div>
+   <div class="flex flex-wrap items-center md:justify-between justify-center bg-black text-white">
+      <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+        <div class="text-lg  py-1">
+          Copyright © <span id="get-current-year">2021</span>
+          <a href="index.html" class="text-white ">Let's Coding</a>
+        </div>
+      </div>
+    </div>
+
+</body>
+<script src="js/index.js"></script>
+
+
+
+</html>

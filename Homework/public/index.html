@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Let's Coding</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+
+</head>
+
+<body class="">
+  <!-- 水平导航栏 -->
+  <nav id="header" class>
+    <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2">
+      <div class="pl-4 flex items-center">
+        <div class="logo m-4">
+          <button id="logo">
+            Let's Coding
+          </button>
+        </div>
+      </div>
+
+      <div class="block lg:hidden pr-4">
+        <button id="nav-toggle"
+          class="flex items-center px-3 py-2 border rounded text-gray-500  border-gray-600 hover:text-gray-700 hover:border-green-500 appearance-none focus:outline-none">
+          <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>菜单</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0  p-4 lg:p-0 z-20"
+        id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <span class="text-gray-500 text-xs mr-1">夜间模式</span>
+          <label class="switch mr-2 mt-1">
+            <input type="checkbox" id="nightMode">
+            <span class="slider"></span>
+          </label>
+
+          <li class="mr-6 ">
+            <a class="inline-block py-2 px-4   no-underline" href="code.html">新建</a>
+          </li>
+
+          <li class="mr-6">
+            <a class="inline-block  no-underline  py-2 px-4 " href="shop.html">商城</a>
+          </li>
+          <li class="mr-6">
+            <a class="inline-block  no-underline  py-2 px-4" href="discussion.html">讨论</a>
+          </li>
+          <li class="mr-6 relative">
+            <a class="inline-block  no-underline  py-2 px-4 flex" href="chat.html" id="message">
+              <span>消息</span>
+              <svg t="1638248839848" class="icon mt-2" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="6710" width="12" height="12">
+                <path
+                  d="M966.4 323.2c-9.6-9.6-25.6-9.6-35.2 0l-416 416-425.6-416c-9.6-9.6-25.6-9.6-35.2 0-9.6 9.6-9.6 25.6 0 35.2l441.6 432c9.6 9.6 25.6 9.6 35.2 0l435.2-432C976 345.6 976 332.8 966.4 323.2z"
+                  p-id="6711" fill="#ffffff"></path>
+              </svg>
+            </a>
+            <!-- 二级菜单 -->
+
+          </li>
+          <li class="mr-6">
+            <a class="inline-block  no-underline  py-2 px-4" href="login.html">登录</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 主体内容 -->
+  <div class="px-4 lg:px-40 py-20 ">
+
+
+    <div class="container flex justify-between mx-auto">
+
+      <div class="w-full lg:w-8/12">
+        <!-- 热门讨论 -->
+        <div id="hotDiscus" class="flex justify-between lg:flex-row flex-col mb-1">
+          <div class="w-full lg:w-1/2 shadow-md rounded-xl mb-1">
+            <div class="flex-col space-y-2 items-center justify-end flex-1 h-full p-4 rounded-xl  border-2">
+              <div class="flex justify-between">
+                <p class="w-2/3 text-md  text-gray-700">求助&nbsp;|&nbsp; 用C语言输出HelloWorld</p>
+                <div class="text-xs bg-red-600 rounded-lg p-1 text-white">热议中</div>
+              </div>
+              <p class="w-full pb-2 text-sm  leading-tight text-black">用C语言输出HelloWorld...</p>
+              <div class="rounded mr-auto ">
+                <div class="rounded-lg flex justify-between">
+                  <div class=" flex items-start">
+                    <img src="image/pxy.jpg" alt="" class="rounded-full w-6" style="margin-left:-6px;">
+                    <img src="image/lsb.jpg" alt="" class="rounded-full w-6" style="margin-left:-6px;">
+                    <img src="image/avatar.jpg" alt="" class="rounded-full w-6" style="margin-left:-6px;">
+                    <p class="ml-4 text-sm mt-1">1.2K用户正在围观</p>
+                  </div>
+                  <a href="#" class="text-blue-400">进入讨论>></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="w-full lg:w-1/2 shadow-md rounded-xl mb-1 ml-1">
+            <div class="flex-col space-y-2 items-center justify-end flex-1 h-full p-4 rounded-xl  border-2">
+              <div class="flex justify-between">
+                <p class="w-2/3 text-md  text-gray-700">求助&nbsp;|&nbsp; 用C语言输出HelloWorld</p>
+                <div class="text-xs bg-red-600 rounded-lg p-1 text-white">热议中</div>
+              </div>
+              <p class="w-full pb-2 text-sm  leading-tight text-black">用C语言输出HelloWorld...</p>
+              <div class="rounded mr-auto ">
+                <div class="rounded-lg flex justify-between">
+                  <div class=" flex items-start">
+                    <img src="image/avatar.jpg" alt="" class="rounded-full w-6" style="margin-left:-6px;">
+                    <img src="image/lhr.jpg" alt="" class="rounded-full w-6" style="margin-left:-6px;">
+                    <img src="image/lsb.jpg" alt="" class="rounded-full w-6" style="margin-left:-6px;">
+                    <p class="ml-4 text-sm mt-1">1.2K用户正在围观</p>
+                  </div>
+                  <a href="#" class="text-blue-400">进入讨论>></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- 热门讨论完 -->
+
+        <!--热门视频  -->
+        <h1 class="text-xl font-bold text-gray-700 md:text-2xl">热门直播</h1>
+        <div class="border  rounded shadow flex-col gap-2 lg:flex-row flex">
+          <div class="relative  py-4 px-6 rounded-b-md w-64 my-4 shadow mt-8 ml-2 ">
+            <div class="  flex items-center absolute rounded-full py-2 px-2 shadow bg-black left-4 -top-6">
+              <!-- svg  -->
+              <svg t="1638185170578" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="6964" width="24" height="24">
+                <path d="M1004 207.2H20c-4.8 0-8-3.2-8-8s3.2-8 8-8h984c4.8 0 8 3.2 8 8 0 4-3.2 8-8 8z" p-id="6965"
+                  fill="#ffffff"></path>
+                <path
+                  d="M1004 1020H20c-8.8 0-16-7.2-16-16V20c0-8.8 7.2-16 16-16h984c8.8 0 16 7.2 16 16v984c0 8.8-7.2 16-16 16z m-968-32h952V36H36v952z"
+                  p-id="6966" fill="#ffffff"></path>
+                <path
+                  d="M358.4 705.6c-2.4 0-4.8-0.8-7.2-1.6L172.8 622.4c-6.4-3.2-10.4-9.6-10.4-16v-47.2c0-7.2 4-13.6 10.4-16l177.6-81.6c5.6-2.4 12-2.4 16.8 0.8 5.6 3.2 8 8.8 8 15.2V520c0 7.2-4 13.6-10.4 16L264 582.4l101.6 46.4c6.4 3.2 10.4 9.6 10.4 16v42.4c0 6.4-3.2 12-8 15.2-2.4 1.6-6.4 3.2-9.6 3.2z m0-229.6h-0.8L180 557.6c-0.8 0-0.8 0.8-0.8 1.6v47.2c0 0.8 0.8 1.6 0.8 1.6l177.6 80.8h1.6c0.8 0 0.8-0.8 0.8-1.6v-42.4c0-0.8-0.8-1.6-0.8-1.6l-117.6-53.6c-3.2-1.6-4.8-4-4.8-7.2s1.6-5.6 4.8-7.2l117.6-52.8c0.8 0 0.8-0.8 0.8-1.6v-42.4c0-0.8 0-0.8-0.8-1.6 0-0.8 0-0.8-0.8-0.8zM449.6 792.8h-37.6c-6.4 0-12-3.2-15.2-8-3.2-4.8-4-12-0.8-16.8l163.2-346.4c3.2-6.4 9.6-10.4 16-10.4h37.6c6.4 0 12 3.2 15.2 8 3.2 4.8 4 12 0.8 16.8L465.6 782.4c-2.4 6.4-8.8 10.4-16 10.4z m125.6-366.4c-0.8 0-1.6 0.8-1.6 0.8L409.6 774.4v1.6c0 0.8 0.8 0.8 1.6 0.8h37.6c0.8 0 1.6-0.8 1.6-0.8l163.2-346.4v-1.6c0-0.8-0.8-0.8-1.6-0.8h-36.8zM665.6 705.6c-3.2 0-6.4-0.8-9.6-2.4-5.6-3.2-8-8.8-8-15.2v-42.4c0-7.2 4-13.6 10.4-16L760 582.4l-101.6-45.6c-6.4-3.2-10.4-9.6-10.4-16v-42.4c0-6.4 3.2-12 8-15.2 4.8-3.2 12-4 16.8-0.8L850.4 544c6.4 3.2 10.4 9.6 10.4 16v47.2c0 7.2-4 13.6-10.4 16L672.8 704c-2.4 0.8-4.8 1.6-7.2 1.6z m0-229.6h-0.8c-0.8 0-0.8 0.8-0.8 1.6V520c0 0.8 0.8 1.6 0.8 1.6l117.6 52.8c3.2 1.6 4.8 4 4.8 7.2s-1.6 6.4-4.8 7.2l-117.6 53.6c-0.8 0-0.8 0.8-0.8 1.6v42.4c0 0.8 0 0.8 0.8 1.6 0.8 0 1.6 0.8 1.6 0l177.6-80c0.8 0 0.8-0.8 0.8-1.6v-47.2c0-0.8-0.8-1.6-0.8-1.6L666.4 476h-0.8zM684 123.2H98.4c-4.8 0-8-3.2-8-8s3.2-8 8-8h585.6c4.8 0 8 3.2 8 8 0 4-4 8-8 8zM804 123.2h-36.8c-4.8 0-8-3.2-8-8s3.2-8 8-8h36.8c4.8 0 8 3.2 8 8 0 4-3.2 8-8 8zM925.6 123.2h-36.8c-4.8 0-8-3.2-8-8s3.2-8 8-8h36.8c4.8 0 8 3.2 8 8 0 4-3.2 8-8 8z"
+                  p-id="6967" fill="#ffffff"></path>
+              </svg>
+            </div>
+            <div class="mt-8">
+              <p class="text-xl font-semibold my-2">C/C++逆向开发</p>
+              <div class="flex space-x-2 text-gray-400 text-sm my-3">
+                <!-- svg  -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p>2021-11-21 20:00</p>
+              </div>
+              <div class="border-t-2"></div>
+
+              <div class="flex justify-between">
+                <div class="my-2 text-center">
+                  <p class="font-semibold text-gray-700 mb-2">【裴胜波】带你搞定C++逆向开发</p>
+                  <img src="image/pxy.jpg" alt="" class="rounded-full w-6 ">
+                </div>
+                <div class="my-2 mt-6 ">
+
+                  <a href="#">
+                    <span class="absolute top-4 right-2">
+                      <svg t="1638184912853" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="3703" width="32" height="32">
+                        <path
+                          d="M512 0C230.4 0 0 230.4 0 512s230.4 512 512 512 512-230.4 512-512S793.6 0 512 0z m0 981.333333C253.866667 981.333333 42.666667 770.133333 42.666667 512S253.866667 42.666667 512 42.666667s469.333333 211.2 469.333333 469.333333-211.2 469.333333-469.333333 469.333333z"
+                          p-id="3704" fill="#1296db"></path>
+                        <path
+                          d="M672 441.6l-170.666667-113.066667c-57.6-38.4-106.666667-12.8-106.666666 57.6v256c0 70.4 46.933333 96 106.666666 57.6l170.666667-113.066666c57.6-42.666667 57.6-106.666667 0-145.066667z"
+                          p-id="3705" fill="#1296db"></path>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="mt-12 w-20 flex flex-nowrap text-xs text-gray-700">
+                    <svg t="1638186732075" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                      xmlns="http://www.w3.org/2000/svg" p-id="4215" width="18" height="18">
+                      <path
+                        d="M465.92 600.064s42.24 37.376 37.376 72.96c0 0 52.736-62.208 12.544-196.864 0 0 268.544 230.4 92.928 445.44 0 0 440.576-117.504 117.76-546.56 0 0-6.912 60.416-27.136 80.384 0 0-20.48-201.216-303.104-301.824 0 0 92.672 207.104-32.512 328.704a128 128 0 0 0-57.856-68.352c-7.68 92.928-95.232 165.376-101.12 268.288S254.464 896 480.768 921.6a258.816 258.816 0 0 1-67.584-52.736c-91.392-128.256 50.176-218.624 52.736-268.8z"
+                        fill="#d81e06" p-id="4216"></path>
+                    </svg>
+                    <span class="mt-1">1亿播放</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- 第二个视频 -->
+
+          <div class="relative  py-4 px-6 rounded-b-md w-64 my-4 shadow mt-8 ">
+            <div class="  flex items-center absolute rounded-full py-2 px-2 shadow bg-white left-4 -top-6">
+              <!-- svg  -->
+              <svg t="1638187592708" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="5146" width="24" height="24">
+                <path
+                  d="M882.121 362.964c13.703 0 25.32 4.32 34.855 12.959 9.531 8.638 14.299 19.213 14.299 31.723v263.63c0 11.915-4.767 22.193-14.299 30.832-9.533 8.636-21.152 12.956-34.855 12.956h-16.085c-13.703 0-25.32-4.32-34.853-12.956-9.531-8.638-14.299-18.917-14.299-30.832v-263.63c0-12.51 4.767-23.087 14.299-31.723 9.531-8.639 21.15-12.96 34.853-12.96h16.085z m-724.756 0c13.703 0 25.022 4.32 33.959 12.959 8.937 8.638 13.406 19.213 13.406 31.723v263.63c0 11.915-4.468 22.193-13.406 30.832-8.937 8.636-20.256 12.956-33.96 12.956H141.28c-13.703 0-25.32-4.32-34.853-12.956-9.532-8.638-14.298-18.917-14.298-30.832v-263.63c0-12.51 4.766-23.087 14.298-31.723 9.533-8.639 21.15-12.96 34.853-12.96h16.086z m493.3-207.33c10.724 4.767 21.894 11.32 33.513 19.661 11.616 8.34 22.787 18.171 33.511 29.491a213.407 213.407 0 0 1 28.151 37.088c8.042 13.404 13.853 27.554 17.426 42.449h-507.6c9.534-31.577 24.576-57.493 45.13-77.75 20.555-20.257 41.258-36.342 62.11-48.257L317.33 86.822c-1.192-1.19-1.34-3.425-0.447-6.701s4.021-6.702 9.383-10.276c4.767-4.171 9.234-6.107 13.405-5.81 4.17 0.3 6.852 1.043 8.042 2.235l46.471 73.28c16.681-7.744 34.256-13.703 52.725-17.873 18.47-4.17 37.534-6.255 57.194-6.255 40.512 0 78.345 8.34 113.495 25.023l47.361-74.174c1.193-1.192 3.428-1.787 6.706-1.787 3.276 0 8.192 1.787 14.744 5.363 5.957 2.979 9.383 5.659 10.279 8.043 0.891 2.383 0.744 4.17-0.448 5.361l-45.574 72.384zM401.333 232.49c7.744 0 14.299-2.682 19.66-8.043 5.362-5.362 8.044-11.916 8.044-19.66 0-7.745-2.682-14.3-8.043-19.66-5.362-5.364-11.917-8.044-19.661-8.044s-14.298 2.68-19.66 8.043c-5.363 5.361-8.044 11.916-8.044 19.66 0 7.745 2.681 14.3 8.043 19.66 5.363 5.362 11.917 8.044 19.661 8.044z m219.841-3.576c7.744 0 14.299-2.68 19.66-8.043 5.36-5.362 8.043-11.916 8.043-19.66 0-7.745-2.682-14.298-8.042-19.661-5.362-5.361-11.917-8.042-19.661-8.042-7.746 0-14.299 2.68-19.66 8.042-5.363 5.363-8.043 11.916-8.043 19.662 0 7.743 2.68 14.297 8.042 19.66 5.363 5.362 11.915 8.042 19.661 8.042z m142.092 111.708l0.894 402.148c0 13.106-4.32 24.128-12.958 33.065-8.64 8.936-19.214 13.405-31.724 13.405h-12.514v125.113c0 11.915-4.32 22.34-12.957 31.277-8.64 8.937-19.215 13.404-31.725 13.404h-25.916c-11.916 0-22.191-4.466-30.831-13.404-8.638-8.936-12.957-19.363-12.957-31.277V789.239H428.145v125.113c0 11.915-4.322 22.34-12.96 31.277s-19.213 13.404-31.724 13.404h-25.916c-11.916 0-22.194-4.466-30.831-13.404-8.64-8.936-12.96-19.363-12.96-31.277V789.239h-9.83c-12.51 0-23.085-4.468-31.724-13.405-8.638-8.936-12.957-19.959-12.957-33.065V340.622H763.266z"
+                  p-id="5147" fill="#1afa29"></path>
+              </svg>
+            </div>
+            <div class="mt-8">
+              <p class="text-xl font-semibold my-2">安卓开发</p>
+              <div class="flex space-x-2 text-gray-400 text-sm my-3">
+                <!-- svg  -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p>2021-11-21 20:00</p>
+              </div>
+              <div class="border-t-2"></div>
+
+              <div class="flex justify-between">
+                <div class="my-2 text-center">
+                  <p class="font-semibold text-gray-700 mb-2">【刘华荣】带你搞定安卓开发</p>
+                  <img src="image/lsb.jpg" alt="" class="rounded-full w-6 ">
+                </div>
+                <div class="my-2 mt-6 ">
+
+                  <a href="#">
+                    <span class="absolute top-4 right-2">
+                      <svg t="1638184912853" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="3703" width="32" height="32">
+                        <path
+                          d="M512 0C230.4 0 0 230.4 0 512s230.4 512 512 512 512-230.4 512-512S793.6 0 512 0z m0 981.333333C253.866667 981.333333 42.666667 770.133333 42.666667 512S253.866667 42.666667 512 42.666667s469.333333 211.2 469.333333 469.333333-211.2 469.333333-469.333333 469.333333z"
+                          p-id="3704" fill="#1296db"></path>
+                        <path
+                          d="M672 441.6l-170.666667-113.066667c-57.6-38.4-106.666667-12.8-106.666666 57.6v256c0 70.4 46.933333 96 106.666666 57.6l170.666667-113.066666c57.6-42.666667 57.6-106.666667 0-145.066667z"
+                          p-id="3705" fill="#1296db"></path>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="mt-12 w-20 flex flex-nowrap text-xs text-gray-700">
+                    <svg t="1638186732075" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                      xmlns="http://www.w3.org/2000/svg" p-id="4215" width="18" height="18">
+                      <path
+                        d="M465.92 600.064s42.24 37.376 37.376 72.96c0 0 52.736-62.208 12.544-196.864 0 0 268.544 230.4 92.928 445.44 0 0 440.576-117.504 117.76-546.56 0 0-6.912 60.416-27.136 80.384 0 0-20.48-201.216-303.104-301.824 0 0 92.672 207.104-32.512 328.704a128 128 0 0 0-57.856-68.352c-7.68 92.928-95.232 165.376-101.12 268.288S254.464 896 480.768 921.6a258.816 258.816 0 0 1-67.584-52.736c-91.392-128.256 50.176-218.624 52.736-268.8z"
+                        fill="#d81e06" p-id="4216"></path>
+                    </svg>
+                    <span class="mt-1">700亿播放</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第三个 -->
+
+          <div class="relative  py-4 px-6 rounded-b-md w-64 my-4 shadow mt-8 ">
+            <div class="  flex items-center absolute rounded-full py-2 px-2 shadow bg-blue-500 left-4 -top-6">
+              <!-- svg  -->
+              <svg t="1638187679289" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="7889" width="24" height="24">
+                <path
+                  d="M1004 748.8H20c-8.8 0-16-7.2-16-16V20c0-8.8 7.2-16 16-16h984c8.8 0 16 7.2 16 16v712.8c0 8.8-7.2 16-16 16z m-968-32h952V36H36v680.8z"
+                  p-id="7890"></path>
+                <path
+                  d="M706.4 914.4H317.6c-5.6 0-10.4-2.4-13.6-7.2-3.2-4.8-3.2-10.4-1.6-15.2l70.4-166.4c2.4-5.6 8-9.6 14.4-9.6h247.2c6.4 0 12 4 14.4 9.6l70.4 166.4c2.4 4.8 1.6 10.4-1.6 15.2-0.8 4.8-6.4 7.2-11.2 7.2z m-364-32h340l-56.8-134.4H399.2l-56.8 134.4z"
+                  p-id="7891"></path>
+                <path
+                  d="M804 1020h-584c-8.8 0-16-7.2-16-16v-105.6c0-8.8 7.2-16 16-16h584c8.8 0 16 7.2 16 16v105.6c0 8.8-7.2 16-16 16z m-568-32h552v-73.6h-552v73.6zM914.4 650.4H109.6c-4.8 0-8-3.2-8-8V110.4c0-4.8 3.2-8 8-8h804.8c4.8 0 8 3.2 8 8v532c0 4-3.2 8-8 8z m-796.8-16h788.8V118.4H117.6v516z"
+                  p-id="7892"></path>
+                <path
+                  d="M543.2 578.4h-62.4c-4 0-7.2-3.2-8-7.2l-7.2-52.8c-7.2-2.4-14.4-5.6-20.8-8.8l-42.4 32c-3.2 2.4-8 2.4-10.4-0.8l-44-44c-3.2-3.2-3.2-7.2-0.8-10.4l32-42.4c-3.2-6.4-6.4-13.6-8.8-20.8l-52.8-7.2c-4-0.8-7.2-4-7.2-8v-62.4c0-4 3.2-7.2 7.2-8l52.8-7.2c2.4-7.2 5.6-14.4 8.8-20.8l-32-42.4c-2.4-3.2-2.4-8 0.8-10.4l44-44c3.2-3.2 7.2-3.2 10.4-0.8l42.4 32c6.4-3.2 13.6-6.4 20.8-8.8l7.2-52.8c0.8-4 4-7.2 8-7.2h62.4c4 0 7.2 3.2 8 7.2l7.2 52.8c7.2 2.4 14.4 5.6 20.8 8.8l42.4-32c3.2-2.4 8-2.4 10.4 0.8l44 44c3.2 3.2 3.2 7.2 0.8 10.4l-32 42.4c3.2 6.4 6.4 13.6 8.8 20.8l52.8 7.2c4 0.8 7.2 4 7.2 8V408c0 4-3.2 7.2-7.2 8l-52.8 7.2c-2.4 7.2-5.6 14.4-8.8 20.8l32 42.4c2.4 3.2 2.4 8-0.8 10.4L632 540.8c-3.2 3.2-7.2 3.2-10.4 0.8l-42.4-32c-6.4 3.2-13.6 6.4-20.8 8.8l-7.2 52.8c-0.8 4-4 7.2-8 7.2z m-55.2-16h48l7.2-51.2c0.8-3.2 2.4-5.6 5.6-6.4 9.6-2.4 18.4-6.4 27.2-11.2 2.4-1.6 6.4-1.6 8.8 0.8l41.6 31.2 34.4-34.4-31.2-41.6c-1.6-2.4-2.4-5.6-0.8-8.8 4.8-8.8 8.8-17.6 11.2-27.2 0.8-3.2 3.2-5.6 6.4-5.6l51.2-7.2V352l-51.2-7.2c-3.2-0.8-5.6-2.4-6.4-5.6-2.4-9.6-6.4-18.4-11.2-27.2-1.6-2.4-1.6-6.4 0.8-8.8l31.2-41.6-34.4-34.4-41.6 31.2c-2.4 1.6-5.6 2.4-8.8 0.8-8.8-4.8-17.6-8.8-27.2-11.2-3.2-0.8-5.6-3.2-5.6-6.4l-7.2-51.2h-48l-7.2 51.2c-0.8 3.2-2.4 5.6-5.6 6.4-9.6 2.4-18.4 6.4-27.2 11.2-2.4 1.6-6.4 1.6-8.8-0.8l-41.6-31.2-34.4 34.4 31.2 41.6c1.6 2.4 2.4 5.6 0.8 8.8-4.8 8.8-8.8 17.6-11.2 27.2-0.8 3.2-3.2 5.6-6.4 5.6l-52 7.2v48.8l51.2 7.2c3.2 0.8 5.6 2.4 6.4 5.6 2.4 9.6 6.4 18.4 11.2 27.2 1.6 2.4 1.6 6.4-0.8 8.8l-31.2 41.6 34.4 34.4 41.6-31.2c2.4-1.6 5.6-2.4 8.8-0.8 8.8 4.8 17.6 8.8 27.2 11.2 3.2 0.8 5.6 3.2 5.6 6.4l8 51.2z m24-109.6c-42.4 0-76-34.4-76-76 0-42.4 34.4-76 76-76 42.4 0 76 34.4 76 76s-33.6 76-76 76z m0-136.8c-33.6 0-60 27.2-60 60 0 33.6 27.2 60 60 60 33.6 0 60-27.2 60-60s-26.4-60-60-60z"
+                  p-id="7893"></path>
+              </svg>
+            </div>
+            <div class="mt-8">
+              <p class="text-xl font-semibold my-2">网站开发</p>
+              <div class="flex space-x-2 text-gray-400 text-sm my-3">
+                <!-- svg  -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <p>2021-11-21 20:00</p>
+              </div>
+              <div class="border-t-2"></div>
+
+              <div class="flex justify-between">
+                <div class="my-2 text-center">
+                  <p class="font-semibold text-gray-700 mb-2">【罗先易】带你搞定网站开发</p>
+                  <img src="image/lhr.jpg" alt="" class="rounded-full w-6 ">
+                </div>
+                <div class="my-2 mt-6 ">
+
+                  <a href="#">
+                    <span class="absolute top-4 right-2">
+                      <svg t="1638184912853" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="3703" width="32" height="32">
+                        <path
+                          d="M512 0C230.4 0 0 230.4 0 512s230.4 512 512 512 512-230.4 512-512S793.6 0 512 0z m0 981.333333C253.866667 981.333333 42.666667 770.133333 42.666667 512S253.866667 42.666667 512 42.666667s469.333333 211.2 469.333333 469.333333-211.2 469.333333-469.333333 469.333333z"
+                          p-id="3704" fill="#1296db"></path>
+                        <path
+                          d="M672 441.6l-170.666667-113.066667c-57.6-38.4-106.666667-12.8-106.666666 57.6v256c0 70.4 46.933333 96 106.666666 57.6l170.666667-113.066666c57.6-42.666667 57.6-106.666667 0-145.066667z"
+                          p-id="3705" fill="#1296db"></path>
+                      </svg>
+                    </span>
+                  </a>
+                  <div class="mt-12 w-20 flex flex-nowrap text-xs text-gray-700" id="code">
+                    <svg t="1638186732075" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                      xmlns="http://www.w3.org/2000/svg" p-id="4215" width="18" height="18">
+                      <path
+                        d="M465.92 600.064s42.24 37.376 37.376 72.96c0 0 52.736-62.208 12.544-196.864 0 0 268.544 230.4 92.928 445.44 0 0 440.576-117.504 117.76-546.56 0 0-6.912 60.416-27.136 80.384 0 0-20.48-201.216-303.104-301.824 0 0 92.672 207.104-32.512 328.704a128 128 0 0 0-57.856-68.352c-7.68 92.928-95.232 165.376-101.12 268.288S254.464 896 480.768 921.6a258.816 258.816 0 0 1-67.584-52.736c-91.392-128.256 50.176-218.624 52.736-268.8z"
+                        fill="#d81e06" p-id="4216"></path>
+                    </svg>
+                    <span class="mt-1">8万亿播放</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="flex items-center justify-between ">
+          <h1 class="text-xl font-bold text-gray-700 md:text-2xl">Code</h1>
+          <div>
+            <select
+              class="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+              <option>最热</option>
+              <option>最新</option>
+            </select>
+          </div>
+        </div>
+        <!-- 代码列表 -->
+
+
+
+        <div class="shadow-lg mt-2 border-1 border">
+          <div class="mt-6" id="codeList"></div>
+        </div>
+
+        <div class="mt-8">
+          <div class="flex" id="page">
+            <a href="#code"
+              class="px-3 py-2 mx-1 font-medium text-gray-500  rounded-md hover:bg-blue-500 hover:text-white">
+              上页
+            </a>
+
+            <a href="#code"
+              class="px-3 py-2 mx-1 font-medium  bg-blue-500  rounded-md hover:bg-blue-500 hover:text-white">
+              1
+            </a>
+
+            <a href="#code"
+              class="px-3 py-2 mx-1 font-medium text-gray-700  rounded-md hover:bg-blue-500 hover:text-white">
+              2
+            </a>
+
+            <a href="#code"
+              class="px-3 py-2 mx-1 font-medium text-gray-700  rounded-md hover:bg-blue-500 hover:text-white">
+              3
+            </a>
+
+            <a href="#code"
+              class="px-3 py-2 mx-1 font-medium text-gray-700  rounded-md hover:bg-blue-500 hover:text-white">
+              下页
+            </a>
+          </div>
+        </div>
+        <!--  -->
+      </div>
+
+      <div class="hidden w-4/12 -mx-8 lg:block">
+
+        <div class="px-8">
+          <div class="mt-4">
+            <!-- 轮播图 -->
+            <div class="banner_container mb-4 border">
+              <!-- 图片 -->
+              <ul class="img_box">
+                <li><img src="image/Android.png" alt=""></li>
+                <li><img src="image/Android.png" alt=""></li>
+                <li><img src="image/Android.png" alt=""></li>
+                <li><img src="image/Android.png" alt=""></li>
+                <li><img src="image/Android.png" alt=""></li>
+                <li><img src="image/Android.png" alt=""></li>
+              </ul>
+
+              <!-- 中间圆点 -->
+              <ul class="sel_box">
+                <!-- 自定义属性 -->
+                <li data-index="0"></li>
+                <li data-index="1"></li>
+                <li data-index="2"></li>
+                <li data-index="3"></li>
+
+              </ul>
+
+
+            </div>
+          </div>
+
+          <div class=" max-w-sm px-6 py-4 mx-auto  rounded-lg shadow-md">
+            <div class="">
+              <button class="dis" id="createDis">发起讨论
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor"
+                      d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                  </svg>
+                </div>
+              </button>
+
+              <button class="dis mt-2" id="newCode">新建代码片段
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor"
+                      d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path>
+                  </svg>
+                </div>
+              </button>
+              <p class="mt-4">继续阅读<a href="#" class="ml-1 text-blue-500">用C语言实现一个JS引擎</a></p>
+              <p class="mt-4">继续编辑<a href="code.html" class="ml-1 text-blue-500">HelloWorld</a></p>
+
+            </div>
+
+            </a>
+          </div>
+        </div>
+
+
+        <div class="px-8">
+          <h1 class="mb-4 text-xl font-bold text-gray-700">热门作者</h1>
+          <div class="flex flex-col max-w-sm px-6 py-4 mx-auto  rounded-lg shadow-md">
+            <ul class="-mx-4">
+              <li class="flex items-center"><img src="image/pxy.jpg" alt="avatar"
+                  class="object-cover w-10 h-10 mx-4 rounded-full">
+                <p><a href="#" class="mx-1 font-bold text-gray-700 hover:underline">
+                    裴胜波</a><span class="text-sm font-light text-gray-700">发布1300篇</span></p>
+              </li>
+              <li class="flex items-center mt-6"><img src="image/avatar.jpg" alt="avatar"
+                  class="object-cover w-10 h-10 mx-4 rounded-full">
+                <p><a href="#" class="mx-1 font-bold text-gray-700 hover:underline">裴魏江</a><span
+                    class="text-sm font-light text-gray-700">发布500篇</span></p>
+              </li>
+              <li class="flex items-center mt-6"><img src="image/lsb.jpg" alt="avatar"
+                  class="object-cover w-10 h-10 mx-4 rounded-full">
+                <p><a href="#" class="mx-1 font-bold text-gray-700 hover:underline">刘华荣</a><span
+                    class="text-sm font-light text-gray-700">发布498篇</span></p>
+                </p>
+              </li>
+              <li class="flex items-center mt-6"><img src="image/lhr.jpg" alt="avatar"
+                  class="object-cover w-10 h-10 mx-4 rounded-full">
+                <p><a href="#" class="mx-1 font-bold text-gray-700 hover:underline">罗先易</a><span
+                    class="text-sm font-light text-gray-700">发布392篇</span></p>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="px-8 mt-10">
+          <h1 class="mb-4 text-xl font-bold text-gray-700">分类</h1>
+          <div class="flex flex-col max-w-sm px-4 py-6 mx-auto  rounded-lg shadow-md">
+            <ul>
+              <li><a href="#" class="mx-1 font-bold text-gray-700 hover:text-gray-600 hover:underline">-
+                  C/C++</a></li>
+              <li class="mt-2"><a href="#" class="mx-1 font-bold text-gray-700 hover:text-gray-600 hover:underline">-
+                  javascript</a></li>
+              <li class="mt-2"><a href="#" class="mx-1 font-bold text-gray-700 hover:text-gray-600 hover:underline">-
+                  云计算</a>
+              </li>
+              <li class="mt-2"><a href="#" class="mx-1 font-bold text-gray-700 hover:text-gray-600 hover:underline">-
+                  后端开发</a></li>
+              <li class="flex items-center mt-2"><a href="#"
+                  class="mx-1 font-bold text-gray-700 hover:text-gray-600 hover:underline">-
+                  服务器开发</a></li>
+              <li class="flex items-center mt-2"><a href="#"
+                  class="mx-1 font-bold text-gray-700 hover:text-gray-600 hover:underline">-
+                  网络安全</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="px-8 mt-10">
+          <h1 class="mb-4 text-xl font-bold text-gray-700">最新文章</h1>
+          <div class="flex flex-col max-w-sm px-8 py-6 mx-auto  rounded-lg shadow-md">
+            <div class="flex items-center justify-center"><a href="#"
+                class="px-2 py-1 text-sm text-green-100 bg-gray-600 rounded hover:bg-gray-500">程序测试</a>
+            </div>
+            <div class="mt-4"><a href="person.html"
+                class="text-lg font-medium text-gray-700 hover:underline">测试用例自动生成方法</a></div>
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center"><img src="image/pxy.jpg" alt="avatar"
+                  class="object-cover w-8 h-8 rounded-full"><a href="#"
+                  class="mx-3 text-sm text-gray-700 hover:underline">裴华荣</a></div><span
+                class="text-sm font-light text-gray-600">2021-11-21</span>
+            </div>
+
+          </div>
+          <div class="flex flex-col max-w-sm px-8 py-6 mx-auto  rounded-lg shadow-md">
+            <div class="flex items-center justify-center"><a href="#"
+                class="px-2 py-1 text-sm text-green-100 bg-gray-600 rounded hover:bg-gray-500">程序测试</a>
+            </div>
+            <div class="mt-4"><a href="person.html"
+                class="text-lg font-medium text-gray-700 hover:underline">测试用例自动生成方法</a></div>
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center"><img src="image/lsb.jpg" alt="avatar"
+                  class="object-cover w-8 h-8 rounded-full"><a href="#"
+                  class="mx-3 text-sm text-gray-700 hover:underline">刘先易</a></div><span
+                class="text-sm font-light text-gray-600">2021-11-21</span>
+            </div>
+
+          </div>
+          <div class="flex flex-col max-w-sm px-8 py-6 mx-auto  rounded-lg shadow-md">
+            <div class="flex items-center justify-center"><a href="#"
+                class="px-2 py-1 text-sm text-green-100 bg-gray-600 rounded hover:bg-gray-500">程序测试</a>
+            </div>
+            <div class="mt-4"><a href="person.html"
+                class="text-lg font-medium text-gray-700 hover:underline">测试用例自动生成方法</a></div>
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex items-center"><img src="image/lhr.jpg" alt="avatar"
+                  class="object-cover w-8 h-8 rounded-full"><a href="#"
+                  class="mx-3 text-sm text-gray-700 hover:underline">裴胜波</a></div><span
+                class="text-sm font-light text-gray-600">2021-11-21</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- footer -->
+  <div class="flex flex-wrap items-center md:justify-between justify-center bg-black text-white">
+    <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+      <div class="text-lg  py-1">
+        Copyright © <span id="get-current-year">2021</span>
+        <a href="index.html" class="text-white ">Let's Coding</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+<script src="js/index.js"></script>
+<script>
+  const codeList = document.querySelector('#codeList');
+
+
+  const codeCard = (tag, hot, title, description, color = 'bg-red', time = `2021-11-28`, imgSrc = `image/avatar.jpg`, className = '') => {
+    return ` <div class="w-full px-4 py-2 border-b-2 animate__animated ${className} ">
+    <div class="flex items-center justify-between">
+        <span class="font-light text-gray-600 text-sm">${time}</span>
+        <span class="flex justify-between">
+            <a href="#" class="px-1 py-1 font-bold text-gray-100 text-xs bg-gray-600 rounded hover:bg-gray-500">${tag}</a>
+            <a href="#" class="px-1 py-1 font-bold text-gray-100 text-xs ${color}-600 rounded hover:${color}-500 mr-1 ml-1 ">${hot}</a>
+        </span>
+    </div>
+    <div class="mt-2"><a href="#" class="text-md font-bold text-gray-700 hover:underline">${title}</a>
+      <p class="mt-2 text-gray-600">${description}</p>
+    </div>
+    <div class="flex items-center justify-between mt-2"><a href="post.html"
+        class="text-blue-500 ">查看代码</a>
+      <div><a href="person.html" class="flex items-center"><img src="${imgSrc}" alt="avatar"
+            class="hidden object-cover w-8 h-8 mx-4 rounded-full sm:block">
+        </a></div>
+    </div>
+  </div>`;
+  }
+  // 获取select
+  const select = document.querySelector('select');
+  const options = select.querySelectorAll('option');
+  const getSelect = () => {
+    return select.selectedIndex;
+  }
+  // 默认显示最热文章
+  for (let i = 0; i < 10; i++) {
+    codeList.innerHTML += codeCard('C/C++', '最热', 'C语言输出你好，世界', '用C语言实现一个你好，世界的输出');
+  }
+  // select切换时
+  select.addEventListener('change', () => {
+
+    if (getSelect() === 1) {
+      codeList.innerHTML = '';
+      for (let i = 0; i < 10; i++) {
+
+        codeList.innerHTML += codeCard('C/C++', 'new', 'C语言输出HeloWorld', '用C语言实现一个HelloWorld的输出', 'bg-green', '刚刚');
+      }
+    } else {
+      codeList.innerHTML = '';
+      for (let i = 0; i < 10; i++) {
+        codeList.innerHTML += codeCard('C/C++', 'hot', 'C语言输出你好，世界', '用C语言实现一个你好，世界的输出');
+      }
+    }
+  });
+</script>
+
+
+<script>
+  // 轮播图
+  const img_box = document.querySelector('.img_box');
+  const imgs = document.querySelectorAll('img');
+  const sel_box = document.querySelector('.sel_box')
+  const lis = sel_box.querySelectorAll('li');
+
+  let index = 0;
+  let timer = null;
+
+  let imgContainerW = img_box.offsetWidth
+  img_box.style.width = imgContainerW * imgs.length + 'px'
+
+  img_box.style.left = 0 + 'px';
+
+
+  lis[0].className = 'cur'
+  function swapImg() {
+
+    img_box.style.left = -index * imgContainerW + 'px';
+
+    for (let i = 0; i < lis.length; i++) {
+      lis[i].className = '';
+    }
+
+    lis[index].className = 'cur'
+  }
+  function swapFormat() {
+    index++;
+
+    if (index >= 4) {
+
+      index = 4;
+      img_box.style.transition = 'all, linear, 1s';
+      img_box.style.left = -index * imgContainerW + 'px';
+      for (let i = 0; i < lis.length; i++) {
+        lis[i].className = '';
+      }
+
+      lis[0].className = 'cur'
+
+      setTimeout(function () {
+        index = 0;  // 第一张图片
+        img_box.style.transition = '';  // 无过度
+        swapImg();
+      }, 1500)
+
+    } else {
+      img_box.style.transition = 'all, linear, 1.5s';
+      swapImg();
+    }
+  }
+
+  timer = setInterval(swapFormat, 3000)
+
+
+  img_box.addEventListener('mouseover', function () {
+    clearInterval(timer)
+  })
+
+  img_box.addEventListener('mouseout', function () {
+    timer = setInterval(swapFormat, 3000)
+  })
+
+
+  const createDis = document.querySelector('#createDis');
+  createDis.addEventListener('click', () => {
+    window.location.href = 'discussion.html';
+  })
+
+  const newCode = document.querySelector('#newCode');
+  newCode.addEventListener('click', () => {
+    window.location.href = 'code.html';
+  });
+
+
+  // 下一页，上一页
+  const page = document.querySelector('#page');
+  const pageBtns = page.querySelectorAll('a');
+  const next = page.querySelector('a:last-child');
+  const pre = page.querySelector('a:first-child');
+  let pageIndex = 1;
+
+  pre.addEventListener('click', () => {
+    codeList.innerHTML = '';
+
+    for (let i = 0; i < 10; i++) {
+      setTimeout(() => {
+        codeList.innerHTML += codeCard('C/C++', 'new', 'C语言输出HeloWorld', '用C语言实现一个HelloWorld的输出', 'bg-green', '刚刚', 'image/avatar.jpg', ' animate__bounceInRight');
+      }, 1000)
+    }
+    pageIndex = pageIndex - 1;
+    pageBtns.forEach(e => {
+      e.classList.remove('bg-blue-500');
+    })
+
+  })
+
+  next.addEventListener('click', () => {
+    codeList.innerHTML = '';
+
+    for (let i = 0; i < 10; i++) {
+      setTimeout(() => {
+        codeList.innerHTML += codeCard('C/C++', 'new', 'C语言输出HeloWorld', '用C语言实现一个HelloWorld的输出', 'bg-green', '刚刚', 'image/avatar.jpg', ' animate__bounceInLeft');
+      }, 1000)
+    }
+    pageIndex = pageIndex % 3 + 1;
+    pageBtns.forEach(e => {
+      e.classList.remove('bg-blue-500');
+    })
+    pageBtns[pageIndex].classList.add('bg-blue-500');
+
+  });
+  pageBtns[1].addEventListener('click', () => {
+    codeList.innerHTML = '';
+    for (let i = 0; i < 10; i++) {
+      setTimeout(() => {
+        codeList.innerHTML += codeCard('C/C++', 'new', 'C语言输出HeloWorld', '用C语言实现一个HelloWorld的输出', 'bg-green', '刚刚', 'image/avatar.jpg', ' animate__bounceInLeft');
+      }, 1000)
+    }
+    pageIndex = 1;
+    pageBtns.forEach(e => {
+      e.classList.remove('bg-blue-500');
+    })
+    pageBtns[pageIndex].classList.add('bg-blue-500');
+  })
+
+  pageBtns[2].addEventListener('click', () => {
+    codeList.innerHTML = '';
+    for (let i = 0; i < 10; i++) {
+      setTimeout(() => {
+        codeList.innerHTML += codeCard('C/C++', 'new', 'C语言输出HeloWorld', '用C语言实现一个HelloWorld的输出', 'bg-green', '刚刚', 'image/avatar.jpg', ' animate__bounceInLeft');
+      }, 1000)
+    }
+    pageIndex = 2;
+    pageBtns.forEach(e => {
+      e.classList.remove('bg-blue-500');
+    })
+    pageBtns[pageIndex].classList.add('bg-blue-500');
+  })
+
+  pageBtns[3].addEventListener('click', () => {
+    codeList.innerHTML = '';
+    for (let i = 0; i < 10; i++) {
+      setTimeout(() => {
+        codeList.innerHTML += codeCard('C/C++', 'new', 'C语言输出HeloWorld', '用C语言实现一个HelloWorld的输出', 'bg-green', '刚刚', 'image/avatar.jpg', ' animate__bounceInLeft');
+      }, 1000)
+    }
+    pageIndex = 3;
+    pageBtns.forEach(e => {
+      e.classList.remove('bg-blue-500');
+    })
+    pageBtns[pageIndex].classList.add('bg-blue-500');
+  })
+
+
+
+
+</script>
+
+</html>

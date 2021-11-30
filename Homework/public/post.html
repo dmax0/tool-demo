@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+
+<body>
+    <!-- 水平导航栏 -->
+    <nav id="header" class>
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2">
+            <div class="pl-4 flex items-center">
+                <div class="logo m-4">
+                    <button id="logo">
+                        Let's Coding
+                    </button>
+                </div>
+            </div>
+
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-500  border-gray-600 hover:text-gray-700 hover:border-green-500 appearance-none focus:outline-none">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>菜单</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0  p-4 lg:p-0 z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <span class="text-gray-500 text-xs mr-1">夜间模式</span>
+                    <label class="switch mr-2 mt-1">
+                        <input type="checkbox" id="nightMode">
+                        <span class="slider"></span>
+                    </label>
+
+                    <li class="mr-6 ">
+                        <a class="inline-block py-2 px-4   no-underline" href="code.html">新建</a>
+                    </li>
+
+                    <li class="mr-6">
+                        <a class="inline-block  no-underline  py-2 px-4 " href="shop.html">商城</a>
+                      </li>
+                    <li class="mr-6">
+                        <a class="inline-block  no-underline  py-2 px-4" href="discussion.html">讨论</a>
+                    </li>
+                    <li class="mr-6 relative">
+                        <a class="inline-block  no-underline  py-2 px-4 flex" href="chat.html" id="message">
+                            <span>消息</span>
+                            <svg t="1638248839848" class="icon mt-2" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="6710" width="12" height="12">
+                                <path
+                                    d="M966.4 323.2c-9.6-9.6-25.6-9.6-35.2 0l-416 416-425.6-416c-9.6-9.6-25.6-9.6-35.2 0-9.6 9.6-9.6 25.6 0 35.2l441.6 432c9.6 9.6 25.6 9.6 35.2 0l435.2-432C976 345.6 976 332.8 966.4 323.2z"
+                                    p-id="6711" fill="#ffffff"></path>
+                            </svg>
+                        </a>
+
+                    </li>
+                    <li class="mr-6 ">
+                        <a class="inline-block  no-underline  py-2 px-4" href="#">登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="mt-20 ">
+
+        <div class="mb-4 md:mb-0 w-full mx-auto relative ml-4">
+          <div class="px-4 lg:px-0">
+            <h2 class="text-4xl font-semibold text-gray-800 leading-tight">
+              用C语言实现一个HelloWorld的输出
+            </h2>
+            <a 
+              href="#"
+              class="py-2 text-green-700 inline-flex items-center justify-center mb-2"
+            >
+              DragonMax
+            </a>
+          </div>
+  
+          <img src="image/code1.jpg" class="w-full object-cover lg:rounded overflow-y-hidden" style="height: 28em;"/>
+        </div>
+  
+        <div class="flex flex-col lg:flex-row lg:space-x-12">
+  
+          <div class="px-4 ml-8 lg:px-0 mt-12 text-gray-700 text-lg leading-relaxed w-full lg:w-3/4">
+            <p class="pb-6">新建项目
+
+                启动Visual Studio开发工具，在菜单栏中选择【文件】---【新建项目】
+                点击【新建项目】菜单，此时会弹出新建项目窗口，在新建项目窗口中可以选择创建的项目类型，设置项目名称、位置、解决方案名称等。</p>
+  
+            <p class="pb-6">模板去包含了项目开发章的多个模板，如：Visual Basuc、Visual C#、Visual C++等模板。由于我们是针对C语言进行解析。所以只会用到C++中的模板，接下来针对C++模板下的项目类型进行介绍，具体如下：
+
+                Win32 控制台应用程序：用于创建 Win32 控制台应用程序的项目
+                Win32 项目：用于创建 Win32 应用程序、控制台应用程序、DLL 或其他静态库项目
+                空项目：用于创建本地应用程序的空项目
+                生成文件项目：用于使用外部生成系统的项目</p>
+  
+            <p class="pb-6">在此选择C++的模板中的Win32控制台应用程序（运行结果会显示在命令行窗口中）。然后将项目名称设置为Prpgram01，项目的位置”D：\itcast\“,并将解决方案的名称设置为chapter01，这样创建的程序文件就会生成在”D:\itcast\chapter01“目录章。最后点击【确定】按钮，弹出一个Win32应用程序向导窗口，</p>
+  
+            
+  
+            <p class="pb-6">项目创建完成后，就可以在Program01项目中添加C语言源文件。在Program01项目中的源文件夹上点击鼠标右键。在弹出的菜单中依次选择【添加】--->【新建项】
+
+                点击图中新建项，随后在弹出的添加新项窗口里选择【++ 文件(.cpp)】，并在名称输入框中写”HelloWorld.c“
+
+            </p>
+  
+            <p class="pb-6">HelloWorld.c源文件便创建成功，此时，在解决方案资源管理器的源文件夹中便可以看到HelloWorld.c文件。</p>
+  
+            <p class="pb-6">具体代码链接：<a href="code.html">HelloWorld</a></p>
+
+  
+          </div>
+  
+          <div class="w-full lg:w-1/4 m-auto mt-12 max-w-screen-sm">
+            <div class="p-4 border-t border-b md:border md:rounded">
+              <div class="flex py-2">
+                <img src="image/avatar.jpg"
+                  class="h-10 w-10 rounded-full mr-2 object-cover" />
+                <div>
+                  <p class="font-semibold text-gray-700 text-sm">DragonMax </p>
+                  <p class="font-semibold text-gray-600 text-xs"> 作者 </p>
+                </div>
+              </div>
+              <p class="text-gray-700 py-3">
+                文章数：10000
+              </p>
+              <button class="px-2 py-1  border flex w-full items-center justify-center rounded">
+                关注
+                <i class='bx bx-user-plus ml-2' ></i>
+              </button>
+            </div>
+          </div>
+  
+        </div>
+      </main>
+
+      <div class="flex flex-wrap items-center md:justify-between justify-center bg-black text-white">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="text-lg  py-1">
+            Copyright © <span id="get-current-year">2021</span>
+            <a href="index.html" class="text-white ">Let's Coding</a>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="js/index.js"></script>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+
+    <title>用户登录</title>
+    <style>
+        body {
+            font-family: "华文细黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <!-- 水平导航栏 -->
+    <nav id="header" class>
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2">
+            <div class="pl-4 flex items-center">
+                <div class="logo m-4">
+                    <button id="logo">
+                        Let's Coding
+                    </button>
+                </div>
+            </div>
+
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-500  border-gray-600 hover:text-gray-700 hover:border-green-500 appearance-none focus:outline-none">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>菜单</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0  p-4 lg:p-0 z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <span class="text-gray-500 text-xs mr-1">夜间模式</span>
+                    <label class="switch mr-2 mt-1">
+                        <input type="checkbox" id="nightMode">
+                        <span class="slider"></span>
+                    </label>
+
+                    <li class="mr-6 ">
+                        <a class="inline-block py-2 px-4   no-underline" href="code.html">新建</a>
+                    </li>
+
+                    <li class="mr-6">
+                        <a class="inline-block  no-underline  py-2 px-4 " href="shop.html">商城</a>
+                      </li>
+                    <li class="mr-6">
+                        <a class="inline-block  no-underline  py-2 px-4" href="discussion.html">讨论</a>
+                    </li>
+                    <li class="mr-6 relative">
+                        <a class="inline-block  no-underline  py-2 px-4 flex" href="chat.html" id="message">
+                            <span>消息</span>
+                            <svg t="1638248839848" class="icon mt-2" viewBox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="6710" width="12" height="12">
+                                <path
+                                    d="M966.4 323.2c-9.6-9.6-25.6-9.6-35.2 0l-416 416-425.6-416c-9.6-9.6-25.6-9.6-35.2 0-9.6 9.6-9.6 25.6 0 35.2l441.6 432c9.6 9.6 25.6 9.6 35.2 0l435.2-432C976 345.6 976 332.8 966.4 323.2z"
+                                    p-id="6711" fill="#ffffff"></path>
+                            </svg>
+                        </a>
+
+                    </li>
+                    <li class="mr-6 active">
+                        <a class="inline-block  no-underline  py-2 px-4" href="login.html">登录</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="flex items-center p-4  xl:justify-center mt-20">
+        <div
+            class="flex flex-col overflow-hidden  rounded-md shadow-lg  lg:flex-row lg:flex-1 lg:max-w-screen-md w-full">
+            <div
+                class="p-4  text-white bg-black md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
+                <div class="my-3 text-4xl font-bold tracking-wider text-center animate__animated animate__flipInY ">
+                    <a href="index.html">Let's Coding</a>
+                </div>
+                <p class="mt-6 font-normal text-center text-gray-300 md:mt-0">
+                    一起来享受编码的乐趣吧！
+                </p>
+                <p class="flex flex-col items-center justify-center mt-10 text-center">
+                    <span>已有账号？</span>
+                    <a href="login.html" class="hover:text-blue-500">立即登录</a>
+                </p>
+            </div>
+            <div class="p-5  md:flex-1">
+                <h3 class="my-4 text-2xl font-semibold text-gray-700">用户注册</h3>
+                <form class="flex flex-col space-y-5" id="form" action="#">
+                    <div class="flex flex-col space-y-2">
+                        <label for="username" class="text-sm font-medium text-gray-700">用户名</label>
+                        <input type="text" name="username" required
+                            class="flex-grow p-2 border rounded-md text-gray-700 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="password" class="text-sm font-medium text-gray-700">密码</label>
+                        <input type="password" name="password" required
+                            class="flex-grow p-2 border rounded-md text-gray-700 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="password" class="text-sm font-medium text-gray-700">确认密码</label>
+                        <input type="password" name="confirm" required
+                            class="flex-grow p-2 border rounded-md text-gray-700 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="email" class="text-sm font-medium text-gray-700">邮箱</label>
+                        <input type="email" name="email" required
+                            class="flex-grow p-2 border rounded-md text-gray-700 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                        <label for="phone" class="text-sm font-medium text-gray-700">手机号</label>
+                        <input type="text" name="phone" required
+                            class="flex-grow p-2 border rounded-md text-gray-700 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <button type="submit" id="submit"
+                        class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-black rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4">
+                        立即注册
+                    </button>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+<script src="js/register.js"></script>
+
+</html>
